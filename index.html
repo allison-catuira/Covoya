@@ -54,14 +54,16 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 .team-scrollbar-thumb{position:absolute;top:0;left:0;width:12px;background:#fff6ed;border-radius:12px;transition:top 0.2s ease}
 
 /* NAME LIST */
-.team-names-scroll{position:absolute;left:766px;top:248px;width:566px;height:1107px;overflow-y:auto;overflow-x:hidden}
+.team-names-scroll{position:absolute;left:766px;top:248px;width:566px;height:1070px;overflow-y:auto;overflow-x:hidden}
 .team-names-scroll::-webkit-scrollbar{display:none}
 .team-names-inner{position:relative;width:100%}
 .team-member{padding:18px 0;cursor:pointer;border-bottom:1px solid rgba(255,246,237,0.15)}
-.team-member .name{font-family:'Staatliches',sans-serif;font-size:72px;color:#fff6ed;opacity:0.5;line-height:1;white-space:nowrap;transition:opacity 0.2s}
+.team-member .name{font-family:'Staatliches',sans-serif;font-size:72px;color:#fff6ed;opacity:0.5;line-height:1;white-space:nowrap;transition:opacity 0.2s;text-decoration:none}
 .team-member .role{font-family:'Staatliches',sans-serif;font-size:36px;color:#fff6ed;opacity:0.5;white-space:nowrap;transition:opacity 0.2s}
-.team-member:hover .name,.team-member.active .name{opacity:1;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
-.team-member:hover .role,.team-member.active .role{opacity:1}
+.team-member:hover .name{opacity:1;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.team-member:hover .role{opacity:1}
+.team-member.active .name{opacity:1;text-decoration:none}
+.team-member.active .role{opacity:1}
 
 /* PROFILE CARD */
 .profile-card{position:absolute;top:263px;left:101px;width:420px;background:#fff;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity 0.25s ease;z-index:10;overflow:hidden}
