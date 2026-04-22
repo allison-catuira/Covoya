@@ -348,7 +348,10 @@ function selectMember(el, idx) {
   cta.textContent = 'Learn more about ' + firstName;
   cta.onclick = function() { showToast('Opening ' + firstName + '\'s full profile...'); };
 
-  document.getElementById('profileCard').classList.add('visible');
+  var card = document.getElementById('profileCard');
+  var tilt = Math.random() < 0.5 ? -3 : 2;
+  card.style.transform = 'rotate(' + tilt + 'deg)';
+  card.classList.add('visible');
   updateThumb();
 }
 
