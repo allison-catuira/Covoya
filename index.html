@@ -32,15 +32,21 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 
 /* HERO */
 .hero{position:relative;height:487px;overflow:hidden;background:#71a1df}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#a0c1e9 0%,#71a1df 50%,#5a8fc7 100%)}
-.hero-paper{position:absolute;width:900px;height:580px;background:rgba(255,246,237,0.18);transform:rotate(13deg);top:-80px;left:-100px;border-radius:8px}
-.hero-paper2{position:absolute;width:900px;height:580px;background:rgba(255,246,237,0.12);transform:rotate(13deg);top:-60px;left:350px;border-radius:8px}
-.hero-image-left{position:absolute;left:0;top:50px;width:600px;height:436px;overflow:hidden}
-.hero-image-left img{width:100%;height:100%;object-fit:cover;opacity:0.85}
-.hero-image-right{position:absolute;right:0;top:0;width:420px;height:487px;overflow:hidden}
-.hero-image-right img{width:100%;height:100%;object-fit:cover;opacity:0.75}
-.hero-overlay{position:absolute;inset:0;background:rgba(113,161,223,0.2)}
-.hero-title{position:absolute;bottom:60px;right:120px;font-family:'Staatliches',sans-serif;font-size:125px;color:#fff;line-height:1;letter-spacing:2px;white-space:nowrap;text-shadow:0 2px 20px rgba(0,0,0,0.2)}
+.hero-vbg{position:absolute;inset:0;background:#a0c1e9}
+.hero-vbg img{position:absolute;width:100%;height:248%;top:-7%;left:0;object-fit:cover;mix-blend-mode:soft-light;opacity:1}
+.hero-paper{position:absolute;width:1205px;height:753px;background:rgba(255,246,237,0.15);transform:rotate(12.83deg);top:-186px;left:367px;border-radius:4px}
+.hero-paper2{position:absolute;width:1205px;height:753px;background:rgba(255,246,237,0.1);transform:rotate(12.83deg);top:-125px;left:-47px;border-radius:4px}
+.hero-paper3{position:absolute;width:1205px;height:753px;background:rgba(255,246,237,0.08);transform:rotate(12.83deg);top:-119px;left:-578px;border-radius:4px}
+.hero-field{position:absolute;left:0;top:99px;width:633px;height:436px;overflow:hidden}
+.hero-field img{width:100%;height:100%;object-fit:cover}
+.hero-field-mask{position:absolute;left:-27px;top:83px;width:685px;height:477px;background:#fff;-webkit-mask-image:url('https://www.figma.com/api/mcp/asset/c48f84ea-cd0f-420a-bf69-8770eb52d8ff');mask-image:url('https://www.figma.com/api/mcp/asset/c48f84ea-cd0f-420a-bf69-8770eb52d8ff');-webkit-mask-size:633px 457px;mask-size:633px 457px;-webkit-mask-position:38px -1px;mask-position:38px -1px;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.hero-stamp{position:absolute;left:65px;top:32px;width:208px;height:212px;overflow:hidden}
+.hero-stamp img{width:94.5%;height:100.7%;object-fit:contain}
+.hero-center{position:absolute;left:714px;top:-30px;width:573px;height:727px;overflow:hidden}
+.hero-center img{width:100%;height:100%;object-fit:cover}
+.hero-right{position:absolute;left:1079px;top:17px;width:609px;height:812px;overflow:hidden}
+.hero-right img{width:100%;height:100%;object-fit:cover}
+.hero-title{position:absolute;bottom:60px;left:745px;font-family:'Staatliches',sans-serif;font-size:125px;color:#fff;line-height:100px;letter-spacing:2px;white-space:nowrap}
 
 /* INTRO TEXT */
 .intro{background:#fff;padding:80px 72px;text-align:center}
@@ -152,16 +158,15 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-vbg"><img src="https://www.figma.com/api/mcp/asset/16f59452-52a8-4ee4-90c4-6b8632abd351" alt=""/></div>
   <div class="hero-paper"></div>
   <div class="hero-paper2"></div>
-  <div class="hero-image-left">
-    <img src="https://www.figma.com/api/mcp/asset/59c37368-b502-4f75-8801-efc14e2b6649" alt="Team member in field"/>
-  </div>
-  <div class="hero-image-right">
-    <img src="https://www.figma.com/api/mcp/asset/aab001d2-a727-4507-a5d1-28601b4c0c71" alt="Team member"/>
-  </div>
-  <div class="hero-overlay"></div>
+  <div class="hero-paper3"></div>
+  <div class="hero-field-mask"></div>
+  <div class="hero-field"><img src="https://www.figma.com/api/mcp/asset/9c862d0d-39f3-4de3-bae1-e440cf67ddd3" alt="Coffee field"/></div>
+  <div class="hero-stamp"><img src="https://www.figma.com/api/mcp/asset/aadbbed7-ae6e-4623-96c2-24d8a9ce1045" alt="Covoya stamp"/></div>
+  <div class="hero-center"><img src="https://www.figma.com/api/mcp/asset/4aaca114-082a-43ae-abd4-b7da93df834a" alt="Team center"/></div>
+  <div class="hero-right"><img src="https://www.figma.com/api/mcp/asset/75fd86eb-3567-415e-885f-0c3d9dc57e45" alt="Team right"/></div>
   <div class="hero-title">MEET THE TEAM</div>
 </div>
 
