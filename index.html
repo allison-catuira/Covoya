@@ -56,8 +56,9 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 .team-row .role{font-family:'Staatliches',sans-serif;font-size:28px;color:#fff6ed;letter-spacing:1px;text-transform:uppercase;opacity:0.5;transition:opacity 0.2s}
 .team-row:hover .name,.team-row.active .name{opacity:1}
 .team-row:hover .role,.team-row.active .role{opacity:1}
-.scrollbar{position:absolute;right:40px;top:80px;width:12px;height:1000px;background:rgba(255,246,237,0.15);border-radius:12px}
-.scrollbar-thumb{width:12px;height:160px;background:#fff6ed;border-radius:12px}
+.scrollbar-wrap{position:absolute;right:60px;top:0;bottom:0;display:flex;align-items:flex-start;padding-top:175px;padding-bottom:60px}
+.scrollbar-track{position:relative;width:12px;height:100%;background:rgba(255,246,237,0.25);border-radius:12px;overflow:hidden}
+.scrollbar-thumb{position:absolute;top:0;left:0;width:12px;background:#fff6ed;border-radius:12px;transition:top 0.35s cubic-bezier(.4,0,.2,1)}
 
 /* CONTACT CTA */
 .contact-cta{position:relative;height:300px;display:flex;align-items:center;justify-content:center;gap:16px;overflow:hidden}
@@ -190,8 +191,10 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
       </div>
     </div>
   </div>
-  <div class="scrollbar" style="position:absolute;right:40px;top:120px">
-    <div class="scrollbar-thumb"></div>
+  <div class="scrollbar-wrap">
+    <div class="scrollbar-track" id="scrollTrack">
+      <div class="scrollbar-thumb" id="scrollThumb"></div>
+    </div>
   </div>
 </div>
 
@@ -262,18 +265,40 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 
 <script>
 function selectMember(el){
-  document.querySelectorAll('.team-row').forEach(r=>r.classList.remove('active'));
+  const rows = Array.from(document.querySelectorAll('.team-row'));
+  rows.forEach(r=>r.classList.remove('active'));
   el.classList.add('active');
+  const idx = rows.indexOf(el);
+  const track = document.getElementById('scrollTrack');
+  const thumb = document.getElementById('scrollThumb');
+  const trackH = track.clientHeight;
+  const thumbH = thumb.clientHeight;
+  const maxTop = trackH - thumbH;
+  const pct = rows.length > 1 ? idx / (rows.length - 1) : 0;
+  thumb.style.top = Math.round(pct * maxTop) + 'px';
 }
+
+function initScrollbar(){
+  const rows = document.querySelectorAll('.team-row');
+  const track = document.getElementById('scrollTrack');
+  const thumb = document.getElementById('scrollThumb');
+  const thumbH = Math.round(track.clientHeight / rows.length);
+  thumb.style.height = thumbH + 'px';
+  thumb.style.top = '0px';
+}
+
 function showToast(msg){
   var t=document.getElementById('toast');
   t.textContent=msg;
   t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),2000);
 }
+
 document.querySelectorAll('a[href="#"]').forEach(a=>{
   a.addEventListener('click',e=>e.preventDefault());
 });
+
+window.addEventListener('load', initScrollbar);
 </script>
 </body>
 </html>
