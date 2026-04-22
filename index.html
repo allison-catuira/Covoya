@@ -7,26 +7,25 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow-x:hidden}
-.page{position:relative;width:1440px}
 
 /* HEADER */
 .header{background:#fff6ed;height:157px;width:1440px;position:relative}
 .logo-area{position:absolute;left:62px;top:20px}
-.logo-text{font-family:'Staatliches',sans-serif;font-size:38px;color:#212121;letter-spacing:1px;line-height:1}
+.logo-text{font-family:'Staatliches',sans-serif;font-size:38px;color:#212121;line-height:1}
 .logo-sub{font-family:'Quicksand',sans-serif;font-size:11px;color:#212121;letter-spacing:2px;text-transform:uppercase;margin-top:2px}
-.nav-top{position:absolute;right:90px;top:39px;display:flex;gap:24px;align-items:center;font-family:'Quicksand',sans-serif;font-size:14px;color:#212121}
-.nav-top a{color:#212121;text-decoration:none;cursor:pointer}
+.nav-top{position:absolute;right:90px;top:39px;display:flex;gap:24px;align-items:center;font-size:14px;color:#212121}
+.nav-top a{color:#212121;text-decoration:none}
 .nav-top a:hover{text-decoration:underline}
-.cart-icon{position:absolute;right:62px;top:38px;cursor:pointer;font-size:18px}
+.cart-icon{position:absolute;right:62px;top:38px;font-size:18px;cursor:pointer}
 .search-area{position:absolute;left:450px;top:100px}
-.search-area input{font-family:'Quicksand',sans-serif;font-size:14px;color:#212121;background:transparent;border:none;border-bottom:1px solid #212121;padding:4px 4px 4px 0;width:300px;outline:none}
+.search-area input{font-family:'Quicksand',sans-serif;font-size:14px;color:#212121;background:transparent;border:none;border-bottom:1px solid #212121;padding:4px 0;width:300px;outline:none}
 .search-area input::placeholder{color:#888;font-weight:300}
-.sub-nav{position:absolute;right:62px;top:104px;display:flex;gap:30px;font-family:'Staatliches',sans-serif;font-size:22px;color:#212121;letter-spacing:0.5px}
-.sub-nav a{color:#212121;text-decoration:none;cursor:pointer}
+.sub-nav{position:absolute;right:62px;top:104px;display:flex;gap:30px;font-family:'Staatliches',sans-serif;font-size:22px;color:#212121}
+.sub-nav a{color:#212121;text-decoration:none}
 .sub-nav a:hover{color:#8aa57f}
 
 /* BREADCRUMB */
-.breadcrumb{background:#8aa57f;height:56px;display:flex;align-items:center;padding:0 62px;font-family:'Quicksand',sans-serif;font-size:16px;color:#212121}
+.breadcrumb{background:#8aa57f;height:56px;display:flex;align-items:center;padding:0 62px;font-size:16px;color:#212121}
 .breadcrumb a{color:#212121;text-decoration:underline;cursor:pointer}
 
 /* HERO */
@@ -36,35 +35,51 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 
 /* INTRO */
 .intro{background:#fff;padding:80px 72px;text-align:center}
-.intro p{font-family:'Quicksand',sans-serif;font-size:16px;font-weight:500;line-height:1.7;color:#212121;max-width:1116px;margin:0 auto}
+.intro p{font-size:16px;font-weight:500;line-height:1.7;color:#212121;max-width:1116px;margin:0 auto}
 
-/* TEAM SCROLL LIST */
-.team-names-scroll{position:absolute;left:766px;top:248px;right:101px;bottom:60px;overflow:hidden}
-.team-names-inner{position:relative}
-.team-member{cursor:pointer;padding:18px 0;border-bottom:1px solid rgba(255,246,237,0.15)}
-.team-member .name{font-family:'Staatliches',sans-serif;font-size:72px;color:#fff6ed;opacity:0.5;line-height:1;white-space:nowrap;transition:opacity 0.2s;text-decoration:none}
+/* TEAM SECTION */
+.team-section{position:relative;width:1440px;height:1455px;background:#343e30;overflow:hidden}
+.team-bg{position:absolute;inset:0;mix-blend-mode:multiply;opacity:0.3;overflow:hidden}
+.team-bg img{position:absolute;height:136.22%;left:0;top:-23.81%;width:100%;object-fit:cover}
+.team-title{position:absolute;left:101px;top:81px;font-family:'Staatliches',sans-serif;font-size:64px;color:#fff6ed;white-space:nowrap}
+.team-divider-top{position:absolute;left:101px;top:175px;width:1201px;height:3px}
+.team-divider-top img{width:100%;height:100%}
+.team-divider-bottom{position:absolute;left:101px;top:1390px;width:1201px;height:1px}
+.team-divider-bottom img{width:100%;height:100%}
+.team-cups{position:absolute;left:-1px;top:386px;width:737px;height:680px;overflow:hidden}
+.team-cups img{position:absolute;height:100.05%;left:-28.87%;top:-0.02%;width:128.87%}
+
+/* SCROLLBAR */
+.team-scrollbar-track{position:absolute;left:1344px;top:263px;width:12px;height:1070px;background:rgba(255,246,237,0.25);border-radius:12px;overflow:hidden}
+.team-scrollbar-thumb{position:absolute;top:0;left:0;width:12px;background:#fff6ed;border-radius:12px;transition:top 0.2s ease}
+
+/* NAME LIST */
+.team-names-scroll{position:absolute;left:766px;top:248px;width:566px;bottom:40px;overflow:hidden}
+.team-names-inner{position:relative;width:100%}
+.team-member{padding:18px 0;cursor:pointer;border-bottom:1px solid rgba(255,246,237,0.15)}
+.team-member .name{font-family:'Staatliches',sans-serif;font-size:72px;color:#fff6ed;opacity:0.5;line-height:1;white-space:nowrap;transition:opacity 0.2s}
 .team-member .role{font-family:'Staatliches',sans-serif;font-size:36px;color:#fff6ed;opacity:0.5;white-space:nowrap;transition:opacity 0.2s}
 .team-member:hover .name,.team-member.active .name{opacity:1;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
 .team-member:hover .role,.team-member.active .role{opacity:1}
 
 /* PROFILE CARD */
-.profile-card{position:absolute;width:420px;background:#fff;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity 0.25s ease;z-index:10;overflow:hidden;top:263px;left:101px}
+.profile-card{position:absolute;top:263px;left:101px;width:420px;background:#fff;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity 0.25s ease;z-index:10;overflow:hidden}
 .profile-card.visible{opacity:1;pointer-events:all}
 .profile-photo-wrap{position:relative;width:420px;height:560px;overflow:hidden;background:#ec8b6e}
 .profile-photo-main{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
-.profile-title-wrap{position:absolute;left:20px;bottom:30px;z-index:3;width:380px}
-.profile-name-badge{position:relative;display:inline-block;background:#adce9f;padding:8px 24px;border-radius:2px;transform:rotate(2.94deg);overflow:hidden;margin-bottom:6px}
+.profile-title-wrap{position:absolute;left:20px;bottom:30px;z-index:3;width:380px;display:flex;flex-direction:column;gap:8px}
+.profile-name-badge{position:relative;display:inline-block;background:#adce9f;padding:8px 24px;border-radius:2px;transform:rotate(2.94deg);overflow:hidden;align-self:flex-start}
 .profile-name-badge-texture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:soft-light;pointer-events:none}
 .profile-name-badge span{font-family:'Staatliches',sans-serif;font-size:32px;color:#212121;white-space:nowrap;position:relative;z-index:1;letter-spacing:1px}
-.profile-role-badge{position:relative;display:inline-block;background:#1263c9;padding:5px 12px;border-radius:2px;transform:rotate(-3.85deg);overflow:hidden;margin-left:50px}
+.profile-role-badge{position:relative;display:inline-block;background:#1263c9;padding:5px 12px;border-radius:2px;transform:rotate(-3.85deg);overflow:hidden;align-self:flex-start;margin-left:30px}
 .profile-role-badge-texture{position:absolute;inset:0;mix-blend-mode:soft-light;background-size:100px 100px}
 .profile-role-badge span{font-family:'Staatliches',sans-serif;font-size:20px;color:#fff;white-space:nowrap;position:relative;z-index:1;letter-spacing:1px}
 .profile-body{padding:24px 32px 20px;background:#f7f7f7}
-.profile-quote{font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;color:#212121;text-align:center;line-height:1.6;margin-bottom:18px}
+.profile-quote{font-size:14px;font-weight:700;color:#212121;text-align:center;line-height:1.6;margin-bottom:18px}
 .profile-stats{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
-.profile-stat{display:flex;gap:20px;align-items:flex-start}
-.profile-stat-label{font-family:'Quicksand',sans-serif;font-size:12px;font-weight:700;color:#212121;white-space:nowrap;width:140px;flex-shrink:0}
-.profile-stat-val{font-family:'Quicksand',sans-serif;font-size:12px;font-weight:500;color:#212121}
+.profile-stat{display:flex;gap:20px}
+.profile-stat-label{font-size:12px;font-weight:700;color:#212121;white-space:nowrap;width:140px;flex-shrink:0}
+.profile-stat-val{font-size:12px;font-weight:500;color:#212121}
 .profile-cta{display:block;width:100%;background:#adce9f;color:#212121;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:700;border:none;border-radius:2px;padding:10px;cursor:pointer;text-align:center}
 .profile-cta:hover{background:#8fba81}
 
@@ -78,8 +93,8 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 
 /* ALSO OF INTEREST */
 .also{background:#fff;padding:18px 0;display:flex;align-items:center;justify-content:center;gap:36px;border-top:1px solid #e4d2c1;border-bottom:1px solid #e4d2c1}
-.also-label{font-family:'Staatliches',sans-serif;font-size:20px;color:#212121;text-transform:uppercase;letter-spacing:0.5px}
-.also a{font-family:'Quicksand',sans-serif;font-size:16px;font-weight:500;color:#62810e;text-decoration:none;cursor:pointer}
+.also-label{font-family:'Staatliches',sans-serif;font-size:20px;color:#212121;text-transform:uppercase}
+.also a{font-size:16px;font-weight:500;color:#62810e;text-decoration:none}
 .also a:hover{text-decoration:underline}
 
 /* FOOTER */
@@ -88,25 +103,25 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 .footer-podcasts{display:flex;gap:30px}
 .footer-podcast-card{display:flex;flex-direction:column;gap:8px}
 .footer-podcast-card img{width:160px;height:160px;object-fit:cover;border-radius:4px}
-.footer-podcast-label{font-family:'Staatliches',sans-serif;font-size:20px;color:#212121;text-transform:uppercase;letter-spacing:0.5px}
-.footer-podcast-desc{font-family:'Quicksand',sans-serif;font-size:18px;font-weight:300;color:#212121}
-.newsletter-label{font-family:'Quicksand',sans-serif;font-size:18px;font-weight:500;color:#212121;margin-bottom:16px}
+.footer-podcast-label{font-family:'Staatliches',sans-serif;font-size:20px;color:#212121;text-transform:uppercase}
+.footer-podcast-desc{font-size:18px;font-weight:300;color:#212121}
+.newsletter-label{font-size:18px;font-weight:500;color:#212121;margin-bottom:16px}
 .newsletter-form{display:flex;gap:8px;margin-bottom:40px}
 .newsletter-form input{font-family:'Quicksand',sans-serif;font-size:14px;border:2px solid #212121;border-radius:2px;padding:10px 16px;width:300px;outline:none;background:#fff}
-.newsletter-form button{background:#8aa57f;color:#212121;font-family:'Quicksand',sans-serif;font-size:16px;font-weight:700;border:none;border-radius:2px;padding:10px 20px;cursor:pointer;white-space:nowrap}
+.newsletter-form button{background:#8aa57f;color:#212121;font-family:'Quicksand',sans-serif;font-size:16px;font-weight:700;border:none;border-radius:2px;padding:10px 20px;cursor:pointer}
 .newsletter-form button:hover{background:#6b8a65}
-.connect-label{font-family:'Staatliches',sans-serif;font-size:20px;color:#212121;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px}
+.connect-label{font-family:'Staatliches',sans-serif;font-size:20px;color:#212121;text-transform:uppercase;margin-bottom:12px}
 .social-icons{display:flex;gap:20px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid rgba(112,112,112,0.3)}
-.social-icons a{color:#212121;font-family:'Quicksand',sans-serif;font-size:14px;font-weight:500;text-decoration:none;cursor:pointer}
+.social-icons a{font-size:14px;font-weight:500;color:#212121;text-decoration:none}
 .social-icons a:hover{color:#8aa57f}
 .contact-info{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
-.contact-info a{font-family:'Quicksand',sans-serif;font-size:17px;font-weight:300;color:#212121;text-decoration:none;display:flex;gap:8px;align-items:center}
+.contact-info a{font-size:17px;font-weight:300;color:#212121;text-decoration:none;display:flex;gap:8px;align-items:center}
 .contact-info a:hover{text-decoration:underline}
-.footer-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;font-family:'Quicksand',sans-serif;font-size:14px;font-weight:300;color:#212121}
-.footer-links a{color:#212121;text-decoration:none;cursor:pointer}
+.footer-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;font-size:14px;font-weight:300;color:#212121}
+.footer-links a{color:#212121;text-decoration:none}
 .footer-links a:hover{text-decoration:underline}
 .footer-divider{color:#ccc;padding:0 4px}
-.footer-copy{font-family:'Quicksand',sans-serif;font-size:13px;color:#212121;margin-top:16px}
+.footer-copy{font-size:13px;color:#212121;margin-top:16px}
 
 /* TOAST */
 .toast{position:fixed;bottom:32px;right:32px;background:#212121;color:#fff6ed;font-family:'Quicksand',sans-serif;font-size:15px;padding:14px 24px;border-radius:4px;opacity:0;transition:opacity 0.3s;z-index:999;pointer-events:none}
@@ -114,7 +129,6 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 </style>
 </head>
 <body>
-<div class="page">
 
 <!-- HEADER -->
 <div class="header">
@@ -123,37 +137,25 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
     <div class="logo-sub">Specialty Coffee</div>
   </div>
   <nav class="nav-top">
-    <a href="#">Contact</a>
-    <a href="#">Shipping Rates</a>
-    <a href="#">About</a>
-    <a href="#">Support</a>
-    <a href="#">Podcast</a>
-    <a href="#">Blog</a>
+    <a href="#">Contact</a><a href="#">Shipping Rates</a><a href="#">About</a><a href="#">Support</a><a href="#">Podcast</a><a href="#">Blog</a>
     <span style="color:#ccc">|</span>
-    <a href="#">Log In</a>
-    <span style="color:#888">or</span>
-    <a href="#">Create an Account</a>
+    <a href="#">Log In</a><span style="color:#888">or</span><a href="#">Create an Account</a>
   </nav>
   <div class="cart-icon">🛒</div>
-  <div class="search-area">
-    <input type="text" placeholder="Search coffees, countries, or flavor profiles"/>
-  </div>
+  <div class="search-area"><input type="text" placeholder="Search coffees, countries, or flavor profiles"/></div>
   <nav class="sub-nav">
-    <a href="#">ORIGINS</a>
-    <a href="#">CATEGORIES</a>
-    <a href="#">DECAF</a>
-    <a href="#">DEALS</a>
+    <a href="#">ORIGINS</a><a href="#">CATEGORIES</a><a href="#">DECAF</a><a href="#">DEALS</a>
   </nav>
 </div>
 
 <!-- BREADCRUMB -->
 <div class="breadcrumb">
-  <a href="#" onclick="showToast('Navigating to Home…')">Home</a>&nbsp;&gt;&nbsp;Our Team
+  <a href="#" onclick="showToast('Navigating to Home…');return false">Home</a>&nbsp;&gt;&nbsp;Our Team
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <img class="hero-bg-img" src="https://www.figma.com/api/mcp/asset/3af46cde-269c-482c-a68d-87c66688bc83" alt="Meet the team hero"/>
+  <img class="hero-bg-img" src="https://www.figma.com/api/mcp/asset/3af46cde-269c-482c-a68d-87c66688bc83" alt="Meet the team"/>
   <div class="hero-title">MEET THE TEAM</div>
 </div>
 
@@ -164,7 +166,7 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 
 <!-- TEAM SECTION -->
 <div class="team-section" id="teamSection">
-  <div class="team-section-bg"><img src="https://www.figma.com/api/mcp/asset/44e3f9b5-21a1-404e-b92b-207af1e6bdb4" alt=""/></div>
+  <div class="team-bg"><img src="https://www.figma.com/api/mcp/asset/44e3f9b5-21a1-404e-b92b-207af1e6bdb4" alt=""/></div>
   <div class="team-title">Our team</div>
   <div class="team-divider-top"><img src="https://www.figma.com/api/mcp/asset/ddfba69f-1851-4340-9d0d-c2dd9fe59e4b" alt=""/></div>
   <div class="team-divider-bottom"><img src="https://www.figma.com/api/mcp/asset/ab10a873-a267-4a1c-a229-84a0736b8ab3" alt=""/></div>
@@ -172,24 +174,20 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
   <div class="team-scrollbar-track" id="scrollTrack">
     <div class="team-scrollbar-thumb" id="scrollThumb"></div>
   </div>
-
-  <!-- scrollable name list -->
   <div class="team-names-scroll" id="teamScroll">
     <div class="team-names-inner" id="teamInner"></div>
   </div>
-
-  <!-- profile card -->
   <div class="profile-card" id="profileCard">
     <div class="profile-photo-wrap">
-      <img class="profile-photo-main" id="cardPhoto" src="https://www.figma.com/api/mcp/asset/faf8bd0d-ba97-4713-abaa-c4d30b155fdf" alt="Team member"/>
+      <img class="profile-photo-main" src="https://www.figma.com/api/mcp/asset/faf8bd0d-ba97-4713-abaa-c4d30b155fdf" alt="Team member"/>
       <div class="profile-title-wrap">
         <div class="profile-name-badge">
           <img class="profile-name-badge-texture" src="https://www.figma.com/api/mcp/asset/22c1e55c-1305-4dce-a975-d218de8372c7" alt=""/>
-          <span id="cardName">BRITTANY AMELL</span>
+          <span id="cardName">NAME</span>
         </div>
         <div class="profile-role-badge">
           <div class="profile-role-badge-texture" style="background-image:url('https://www.figma.com/api/mcp/asset/aeba56d4-808c-4caa-a03e-4b141cb98e8d')"></div>
-          <span id="cardRole">TRADER</span>
+          <span id="cardRole">ROLE</span>
         </div>
       </div>
     </div>
@@ -203,9 +201,7 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 
 <!-- CONTACT CTA -->
 <div class="contact-cta">
-  <div class="contact-cta-bg">
-    <img src="https://www.figma.com/api/mcp/asset/53ca2f11-09a5-41d2-8cbb-4d21956a55a3" alt=""/>
-  </div>
+  <div class="contact-cta-bg"><img src="https://www.figma.com/api/mcp/asset/53ca2f11-09a5-41d2-8cbb-4d21956a55a3" alt=""/></div>
   <div class="contact-cta-overlay"></div>
   <button class="cta-btn" onclick="showToast('Navigating to Get Started…')">GET STARTED</button>
   <button class="cta-btn" onclick="showToast('Navigating to Contact Us…')">CONTACT US</button>
@@ -214,9 +210,9 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 <!-- ALSO OF INTEREST -->
 <div class="also">
   <span class="also-label">Also of Interest</span>
-  <a href="#" onclick="showToast('Opening: Source Green Coffee')">Source Green Coffee for your Roasting Business</a>
-  <a href="#" onclick="showToast('Opening: Ethiopian Green Coffee')">Ethiopian Green Coffee</a>
-  <a href="#" onclick="showToast('Opening: New Coffee')">New Coffee</a>
+  <a href="#" onclick="showToast('Opening: Source Green Coffee');return false">Source Green Coffee for your Roasting Business</a>
+  <a href="#" onclick="showToast('Opening: Ethiopian Green Coffee');return false">Ethiopian Green Coffee</a>
+  <a href="#" onclick="showToast('Opening: New Coffee');return false">New Coffee</a>
 </div>
 
 <!-- FOOTER -->
@@ -224,7 +220,7 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
   <div class="footer-grid">
     <div class="footer-podcasts">
       <div class="footer-podcast-card">
-        <img src="https://www.figma.com/api/mcp/asset/0db41634-1ff6-4ab7-9822-3d16681df213" alt="CCPN Podcast"/>
+        <img src="https://www.figma.com/api/mcp/asset/0db41634-1ff6-4ab7-9822-3d16681df213" alt="CCPN"/>
         <div class="footer-podcast-label">Podcasts</div>
         <div class="footer-podcast-desc">Covoya Coffee Podcasting Network</div>
       </div>
@@ -242,10 +238,7 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
       </div>
       <div class="connect-label">Connect with us</div>
       <div class="social-icons">
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Twitter</a>
+        <a href="#">Facebook</a><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Twitter</a>
       </div>
       <div class="contact-info">
         <a href="#">✉ customerservice@covoya.com</a>
@@ -262,83 +255,100 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
   </div>
 </div>
 
-</div>
-
 <div class="toast" id="toast"></div>
 
 <script>
 var members = [
   { name: 'BRITTANY AMELL', role: 'TRADER', quote: '"Ten years ago I decided I didn\'t want a career I couldn\'t be passionate about and that\'s how I came to coffee. I came for the coffee but stayed for the people."', stats: [['FAVORITE HOLIDAY','Halloween'],['FIRST ORIGIN TRIP','Colombia 2016'],['FIRST ALBUM OWNED','Britney Spears, Baby One More Time']] },
-  { name: 'MICHELLE ANARIBA', role: 'QUALITY CONTROL MANAGER', quote: '"Quality is not just a checklist — it\'s a conversation between the farmer, the land, and the cup. Every lot tells a story and my job is to make sure that story is told honestly."', stats: [['FAVORITE ORIGIN','Guatemala'],['YEARS AT COVOYA','7'],['COFFEE ORDER','Washed Ethiopian, no milk']] },
-  { name: 'ERICK ARMBRUST', role: 'TRADE COORDINATOR', quote: '"Coffee trading is part logistics puzzle, part relationship building. Every shipment represents months of trust between producers and roasters."', stats: [['FAVORITE ORIGIN','Colombia'],['FIRST ORIGIN TRIP','Honduras 2018'],['HIDDEN TALENT','Semi-pro chess player']] },
-  { name: 'MARINA BORISOV', role: 'LOGISTICS COORDINATOR', quote: '"Getting coffee from a farm in Ethiopia to a roaster in Portland on time and in perfect condition is genuinely thrilling."', stats: [['FAVORITE HOLIDAY','New Year\'s Eve'],['LANGUAGES SPOKEN','English, Russian, Spanish'],['COFFEE ORDER','Double espresso']] },
+  { name: 'MICHELLE ANARIBA', role: 'QUALITY CONTROL MANAGER', quote: '"Quality is not just a checklist — it\'s a conversation between the farmer, the land, and the cup."', stats: [['FAVORITE ORIGIN','Guatemala'],['YEARS AT COVOYA','7'],['COFFEE ORDER','Washed Ethiopian, no milk']] },
+  { name: 'ERICK ARMBRUST', role: 'TRADE COORDINATOR', quote: '"Coffee trading is part logistics puzzle, part relationship building. Every shipment represents months of trust."', stats: [['FAVORITE ORIGIN','Colombia'],['FIRST ORIGIN TRIP','Honduras 2018'],['HIDDEN TALENT','Semi-pro chess player']] },
+  { name: 'MARINA BORISOV', role: 'LOGISTICS COORDINATOR', quote: '"Getting coffee from a farm in Ethiopia to a roaster in Portland on time is genuinely thrilling."', stats: [['FAVORITE HOLIDAY','New Years Eve'],['LANGUAGES SPOKEN','English, Russian, Spanish'],['COFFEE ORDER','Double espresso']] },
   { name: 'LIESA COLLINS', role: 'SENIOR TRADE ANALYST', quote: '"Data is the language of trust in green coffee. When I can show a roaster exactly where their lot came from, that\'s when the relationship deepens."', stats: [['FAVORITE ORIGIN','Kenya'],['FIRST ORIGIN TRIP','Rwanda 2015'],['FIRST ALBUM OWNED','No Doubt, Tragic Kingdom']] },
   { name: 'ERIK DELLA POSTA', role: 'SENIOR OPERATIONS PROCESS MANAGER', quote: '"Operations is the invisible backbone of everything we do. When it\'s working well no one notices — and that\'s exactly how I like it."', stats: [['FAVORITE HOLIDAY','Thanksgiving'],['YEARS AT COVOYA','9'],['COFFEE ORDER','Batch brew, black']] },
-  { name: 'MIKE FERGUSON', role: 'CHIEF STORYTELLER', quote: '"Every coffee has a story worth telling — from the hands that picked it to the cup it ends up in. My job is to make sure that story connects."', stats: [['FAVORITE ORIGIN','Ethiopia'],['COFFEE ORDER','Pour over, light roast'],['HIDDEN TALENT','Amateur filmmaker']] },
+  { name: 'MIKE FERGUSON', role: 'CHIEF STORYTELLER', quote: '"Every coffee has a story worth telling — from the hands that picked it to the cup it ends up in."', stats: [['FAVORITE ORIGIN','Ethiopia'],['COFFEE ORDER','Pour over, light roast'],['HIDDEN TALENT','Amateur filmmaker']] },
   { name: 'MELISSA GOMES', role: 'LOGISTICS SUPERVISOR', quote: '"Logistics is where the magic either happens or falls apart. I make sure it always happens."', stats: [['FAVORITE HOLIDAY','Christmas'],['YEARS AT COVOYA','5'],['COFFEE ORDER','Cappuccino']] },
-  { name: 'ANGELA GREENHAGEN', role: 'JUNIOR TRADER', quote: '"I came to coffee through a love of travel and ended up staying for the complexity of the trade. There\'s always more to learn."', stats: [['FAVORITE ORIGIN','Peru'],['FIRST ORIGIN TRIP','Guatemala 2022'],['COFFEE ORDER','Flat white']] },
-  { name: 'ANGELA HERNANDEZ', role: 'QUALITY CONTROL ASSISTANT', quote: '"Every cup is a chance to catch something beautiful — or to catch a problem before it reaches the roaster. I love both sides of that."', stats: [['FAVORITE ORIGIN','Honduras'],['COFFEE ORDER','Cold brew'],['HIDDEN TALENT','Competitive cupper']] },
-  { name: 'MARK INMAN', role: 'DIRECTOR & SENIOR TRADER', quote: '"Building long-term relationships with producers is the foundation of everything we do. Trust takes years to build and seconds to lose."', stats: [['FAVORITE ORIGIN','Burundi'],['YEARS AT COVOYA','12'],['COFFEE ORDER','Black drip']] },
-  { name: 'IAN KLUSE', role: 'SENIOR TRADER & SOURCING DIRECTOR', quote: '"Sourcing is part detective work, part diplomacy. You\'re always looking for the next great lot while nurturing the relationships that got you here."', stats: [['FAVORITE ORIGIN','Yemen'],['FIRST ORIGIN TRIP','Colombia 2013'],['COFFEE ORDER','Espresso, straight']] },
+  { name: 'ANGELA GREENHAGEN', role: 'JUNIOR TRADER', quote: '"I came to coffee through a love of travel and ended up staying for the complexity of the trade."', stats: [['FAVORITE ORIGIN','Peru'],['FIRST ORIGIN TRIP','Guatemala 2022'],['COFFEE ORDER','Flat white']] },
+  { name: 'ANGELA HERNANDEZ', role: 'QUALITY CONTROL ASSISTANT', quote: '"Every cup is a chance to catch something beautiful — or to catch a problem before it reaches the roaster."', stats: [['FAVORITE ORIGIN','Honduras'],['COFFEE ORDER','Cold brew'],['HIDDEN TALENT','Competitive cupper']] },
+  { name: 'MARK INMAN', role: 'DIRECTOR & SENIOR TRADER', quote: '"Building long-term relationships with producers is the foundation of everything we do."', stats: [['FAVORITE ORIGIN','Burundi'],['YEARS AT COVOYA','12'],['COFFEE ORDER','Black drip']] },
+  { name: 'IAN KLUSE', role: 'SENIOR TRADER & SOURCING DIRECTOR', quote: '"Sourcing is part detective work, part diplomacy. You\'re always looking for the next great lot."', stats: [['FAVORITE ORIGIN','Yemen'],['FIRST ORIGIN TRIP','Colombia 2013'],['COFFEE ORDER','Espresso, straight']] },
   { name: 'TODD MACKEY', role: 'SENIOR TRADER', quote: '"Green coffee trading rewards patience. The best lots come to those who invest in the relationships behind them."', stats: [['FAVORITE ORIGIN','Kenya'],['YEARS AT COVOYA','8'],['COFFEE ORDER','Chemex']] },
-  { name: 'JOSHUA MARSCEAU', role: 'TRADER', quote: '"Every trade is a puzzle — price, quality, timing, relationships. Getting all four right at once is what gets me out of bed in the morning."', stats: [['FAVORITE ORIGIN','Colombia'],['FIRST ORIGIN TRIP','Ethiopia 2019'],['COFFEE ORDER','AeroPress']] },
-  { name: 'ANNA MALLOZZI', role: 'JUNIOR TRADER', quote: '"I love that green coffee trading sits at the intersection of agriculture, finance, and human connection. No two days are the same."', stats: [['FAVORITE ORIGIN','Costa Rica'],['COFFEE ORDER','Oat milk latte'],['HIDDEN TALENT','Competitive cyclist']] },
-  { name: 'CHARLEY REQUADT', role: 'DIRECTOR OF OPERATIONS', quote: '"Operations at this scale requires both systems thinking and human intuition. The best processes are built around the people running them."', stats: [['FAVORITE HOLIDAY','Fourth of July'],['YEARS AT COVOYA','10'],['COFFEE ORDER','Drip, always drip']] },
-  { name: 'RACHEL STANICH', role: 'JUNIOR TRADER', quote: '"There\'s something incredibly meaningful about connecting farmers who pour their lives into their crop with roasters who will honor that work."', stats: [['FAVORITE ORIGIN','Rwanda'],['FIRST ORIGIN TRIP','Peru 2023'],['COFFEE ORDER','V60']] },
+  { name: 'JOSHUA MARSCEAU', role: 'TRADER', quote: '"Every trade is a puzzle — price, quality, timing, relationships. Getting all four right is what gets me out of bed."', stats: [['FAVORITE ORIGIN','Colombia'],['FIRST ORIGIN TRIP','Ethiopia 2019'],['COFFEE ORDER','AeroPress']] },
+  { name: 'ANNA MALLOZZI', role: 'JUNIOR TRADER', quote: '"I love that green coffee trading sits at the intersection of agriculture, finance, and human connection."', stats: [['FAVORITE ORIGIN','Costa Rica'],['COFFEE ORDER','Oat milk latte'],['HIDDEN TALENT','Competitive cyclist']] },
+  { name: 'CHARLEY REQUADT', role: 'DIRECTOR OF OPERATIONS', quote: '"The best processes are built around the people running them."', stats: [['FAVORITE HOLIDAY','Fourth of July'],['YEARS AT COVOYA','10'],['COFFEE ORDER','Drip, always drip']] },
+  { name: 'RACHEL STANICH', role: 'JUNIOR TRADER', quote: '"There\'s something meaningful about connecting farmers with roasters who will honor that work."', stats: [['FAVORITE ORIGIN','Rwanda'],['FIRST ORIGIN TRIP','Peru 2023'],['COFFEE ORDER','V60']] },
   { name: 'ROB STEPHEN', role: 'MANAGING DIRECTOR', quote: '"Covoya exists because we believe trade should be a force for good — for producers, for roasters, and for every person in between."', stats: [['FAVORITE ORIGIN','Ethiopia'],['YEARS AT COVOYA','15'],['COFFEE ORDER','Single origin espresso']] },
-  { name: 'SAM SUPSKY', role: 'MARKETING MANAGER', quote: '"Green coffee is one of the most fascinating industries in the world and most people have no idea it exists. My job is to change that."', stats: [['FAVORITE ORIGIN','Panama'],['HIDDEN TALENT','Latte art champion'],['COFFEE ORDER','Cortado']] },
-  { name: 'HANNAH VAN AKKEREN', role: 'CUSTOMER SERVICE COORDINATOR', quote: '"Our customers trust us to get things right every single time. I take that seriously — and I genuinely love helping them succeed."', stats: [['FAVORITE HOLIDAY','Thanksgiving'],['YEARS AT COVOYA','3'],['COFFEE ORDER','Cold brew, oat milk']] },
-  { name: 'COLLEEN WALSH', role: 'LOGISTICS MANAGER', quote: '"Moving green coffee around the world is endlessly complex. That complexity is exactly what I love about this job."', stats: [['FAVORITE ORIGIN','Brazil'],['YEARS AT COVOYA','6'],['COFFEE ORDER','Double espresso']] },
-  { name: 'JESSY WEBSTER', role: 'TRADE COORDINATOR', quote: '"Coordination is about anticipating problems before they happen and building the systems that prevent them. I thrive in that space."', stats: [['FAVORITE ORIGIN','Colombia'],['COFFEE ORDER','Pour over'],['HIDDEN TALENT','Amateur botanist']] },
-  { name: 'ETHAN WHITE', role: 'DIGITAL PRODUCT MANAGER', quote: '"Technology should make the work of trading easier and more transparent. Every tool I build is in service of the people using it."', stats: [['FAVORITE ORIGIN','Ethiopia'],['YEARS AT COVOYA','4'],['COFFEE ORDER','Batch brew']] },
-  { name: 'DAVID ZACHARY', role: 'FINANCE DIRECTOR', quote: '"Finance in green coffee is fascinating — you\'re managing risk at every level, from currency to climate. The stakes are real and the work matters."', stats: [['FAVORITE HOLIDAY','New Year\'s Eve'],['YEARS AT COVOYA','7'],['COFFEE ORDER','Black, no exceptions']] }
+  { name: 'SAM SUPSKY', role: 'MARKETING MANAGER', quote: '"Green coffee is one of the most fascinating industries in the world and most people have no idea it exists."', stats: [['FAVORITE ORIGIN','Panama'],['HIDDEN TALENT','Latte art champion'],['COFFEE ORDER','Cortado']] },
+  { name: 'HANNAH VAN AKKEREN', role: 'CUSTOMER SERVICE COORDINATOR', quote: '"Our customers trust us to get things right every single time. I take that seriously."', stats: [['FAVORITE HOLIDAY','Thanksgiving'],['YEARS AT COVOYA','3'],['COFFEE ORDER','Cold brew, oat milk']] },
+  { name: 'COLLEEN WALSH', role: 'LOGISTICS MANAGER', quote: '"Moving green coffee around the world is endlessly complex. That complexity is exactly what I love."', stats: [['FAVORITE ORIGIN','Brazil'],['YEARS AT COVOYA','6'],['COFFEE ORDER','Double espresso']] },
+  { name: 'JESSY WEBSTER', role: 'TRADE COORDINATOR', quote: '"Coordination is about anticipating problems before they happen and building systems that prevent them."', stats: [['FAVORITE ORIGIN','Colombia'],['COFFEE ORDER','Pour over'],['HIDDEN TALENT','Amateur botanist']] },
+  { name: 'ETHAN WHITE', role: 'DIGITAL PRODUCT MANAGER', quote: '"Technology should make the work of trading easier and more transparent."', stats: [['FAVORITE ORIGIN','Ethiopia'],['YEARS AT COVOYA','4'],['COFFEE ORDER','Batch brew']] },
+  { name: 'DAVID ZACHARY', role: 'FINANCE DIRECTOR', quote: '"Finance in green coffee is fascinating — you\'re managing risk at every level, from currency to climate."', stats: [['FAVORITE HOLIDAY','New Years Eve'],['YEARS AT COVOYA','7'],['COFFEE ORDER','Black, no exceptions']] }
 ];
 
-function buildTeamList() {
-  var inner = document.getElementById('teamInner');
-  inner.innerHTML = members.map(function(m, i) {
-    var displayName = m.name.charAt(0) + m.name.slice(1).toLowerCase().replace(/\b\w/g, function(c){ return c.toUpperCase(); });
-    return '<div class="team-member" onclick="selectMember(this,' + i + ')">' +
-      '<div class="name">' + displayName + '</div>' +
-      '<div class="role">' + m.role + '</div>' +
-      '</div>';
-  }).join('');
+function toTitleCase(str) {
+  return str.charAt(0) + str.slice(1).toLowerCase().replace(/\b\w/g, function(c) { return c.toUpperCase(); });
 }
 
-function updateScrollThumb() {
+function buildList() {
+  var inner = document.getElementById('teamInner');
+  var html = '';
+  for (var i = 0; i < members.length; i++) {
+    var m = members[i];
+    var displayName = toTitleCase(m.name);
+    html += '<div class="team-member" data-idx="' + i + '">';
+    html += '<div class="name">' + displayName + '</div>';
+    html += '<div class="role">' + m.role + '</div>';
+    html += '</div>';
+  }
+  inner.innerHTML = html;
+
+  var rows = inner.querySelectorAll('.team-member');
+  for (var j = 0; j < rows.length; j++) {
+    rows[j].addEventListener('click', function() {
+      selectMember(this, parseInt(this.getAttribute('data-idx')));
+    });
+  }
+}
+
+function updateThumb() {
   var scroll = document.getElementById('teamScroll');
   var inner = document.getElementById('teamInner');
   var track = document.getElementById('scrollTrack');
   var thumb = document.getElementById('scrollThumb');
-  var visibleRatio = scroll.clientHeight / inner.scrollHeight;
-  var thumbH = Math.max(40, Math.round(track.clientHeight * visibleRatio));
+  var totalH = inner.scrollHeight;
+  var visibleH = scroll.clientHeight;
+  var trackH = track.clientHeight;
+  var thumbH = Math.max(40, Math.round(trackH * visibleH / totalH));
   thumb.style.height = thumbH + 'px';
-  var scrollRatio = scroll.scrollTop / (inner.scrollHeight - scroll.clientHeight);
-  thumb.style.top = Math.round(scrollRatio * (track.clientHeight - thumbH)) + 'px';
+  var scrollable = totalH - visibleH;
+  var ratio = scrollable > 0 ? scroll.scrollTop / scrollable : 0;
+  thumb.style.top = Math.round(ratio * (trackH - thumbH)) + 'px';
 }
 
 function selectMember(el, idx) {
-  document.querySelectorAll('.team-member').forEach(function(r) { r.classList.remove('active'); });
+  var rows = document.querySelectorAll('.team-member');
+  for (var i = 0; i < rows.length; i++) { rows[i].classList.remove('active'); }
   el.classList.add('active');
 
   var m = members[idx];
+  var firstName = m.name.split(' ')[0].charAt(0) + m.name.split(' ')[0].slice(1).toLowerCase();
+
   document.getElementById('cardName').textContent = m.name;
   document.getElementById('cardRole').textContent = m.role;
   document.getElementById('cardQuote').textContent = m.quote;
-  var firstName = m.name.split(' ')[0].charAt(0) + m.name.split(' ')[0].slice(1).toLowerCase();
+
+  var statsHtml = '';
+  for (var s = 0; s < m.stats.length; s++) {
+    statsHtml += '<div class="profile-stat"><span class="profile-stat-label">' + m.stats[s][0] + '</span><span class="profile-stat-val">' + m.stats[s][1] + '</span></div>';
+  }
+  document.getElementById('cardStats').innerHTML = statsHtml;
+
   var cta = document.getElementById('cardCta');
   cta.textContent = 'Learn more about ' + firstName;
-  cta.onclick = function() { showToast('Opening ' + firstName + "'s full profile…"); };
-  document.getElementById('cardStats').innerHTML = m.stats.map(function(s) {
-    return '<div class="profile-stat"><span class="profile-stat-label">' + s[0] + '</span><span class="profile-stat-val">' + s[1] + '</span></div>';
-  }).join('');
+  cta.onclick = function() { showToast('Opening ' + firstName + '\'s full profile...'); };
 
-  var card = document.getElementById('profileCard');
-  card.style.top = '263px';
-  card.style.left = '101px';
-  card.classList.add('visible');
-
-  updateScrollThumb();
+  document.getElementById('profileCard').classList.add('visible');
+  updateThumb();
 }
 
 function showToast(msg) {
@@ -349,13 +359,9 @@ function showToast(msg) {
 }
 
 window.addEventListener('load', function() {
-  buildTeamList();
-  updateScrollThumb();
-  document.getElementById('teamScroll').addEventListener('scroll', updateScrollThumb);
-});
-
-document.querySelectorAll('a[href="#"]').forEach(function(a) {
-  a.addEventListener('click', function(e) { e.preventDefault(); });
+  buildList();
+  updateThumb();
+  document.getElementById('teamScroll').addEventListener('scroll', updateThumb);
 });
 </script>
 </body>
