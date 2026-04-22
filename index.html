@@ -369,8 +369,12 @@ function selectMember(el){
   const rowRect = el.getBoundingClientRect();
   const sectionRect = teamSection.getBoundingClientRect();
   const cardTop = rowRect.top - sectionRect.top - 200;
-  card.style.top = '263px';
-  card.style.left = '154px';
+  const firstRow = rows[0];
+  const sectionRect = document.querySelector('.team-section').getBoundingClientRect();
+  const firstRowRect = firstRow.getBoundingClientRect();
+  const topOffset = firstRowRect.top - sectionRect.top;
+  card.style.top = topOffset + 'px';
+  card.style.left = '101px';
   card.classList.add('visible');
 }
 
