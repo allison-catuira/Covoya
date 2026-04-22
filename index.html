@@ -183,21 +183,17 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
         <img src="https://www.figma.com/api/mcp/asset/81d66034-9f14-4f2f-8de4-d01341425580" alt="Team" style="width:100%;border-radius:4px"/>
       </div>
       <div class="team-list" id="teamList">
-        <div class="profile-card" id="brittanyCard">
+        <div class="profile-card" id="profileCard">
           <div class="profile-photo-wrap">
-            <img class="photo" src="https://www.figma.com/api/mcp/asset/b11436b9-478e-49fd-bdbb-58f4e0474d7c" alt="Brittany Amell"/>
+            <img class="photo" src="https://www.figma.com/api/mcp/asset/b11436b9-478e-49fd-bdbb-58f4e0474d7c" alt="Team member"/>
             <img class="torn" src="https://www.figma.com/api/mcp/asset/b44c9552-9705-4310-a86d-c28cdbfd2e86" alt=""/>
-            <div class="profile-name-badge"><span>BRITTANY AMELL</span></div>
-            <div class="profile-role-badge"><span>TRADER</span></div>
+            <div class="profile-name-badge"><span id="cardName">BRITTANY AMELL</span></div>
+            <div class="profile-role-badge"><span id="cardRole">TRADER</span></div>
           </div>
           <div class="profile-body">
-            <p class="profile-quote">"Ten years ago I decided I didn't want a career I couldn't be passionate about and that's how I came to coffee. I came for the coffee but stayed for the people. Brainstorming solutions with talented and interesting people is the best part of my job."</p>
-            <div class="profile-stats">
-              <div class="profile-stat"><span class="profile-stat-label">FAVORITE HOLIDAY</span><span class="profile-stat-val">Halloween</span></div>
-              <div class="profile-stat"><span class="profile-stat-label">FIRST ORIGIN TRIP</span><span class="profile-stat-val">Colombia 2016</span></div>
-              <div class="profile-stat"><span class="profile-stat-label">FIRST ALBUM OWNED</span><span class="profile-stat-val">Britney Spears, Baby One More Time</span></div>
-            </div>
-            <button class="profile-cta" onclick="showToast('Opening Brittany\'s full profile…')">Learn more about Brittany</button>
+            <p class="profile-quote" id="cardQuote">"Ten years ago I decided I didn't want a career I couldn't be passionate about and that's how I came to coffee. I came for the coffee but stayed for the people."</p>
+            <div class="profile-stats" id="cardStats"></div>
+            <button class="profile-cta" id="cardCta">Learn more</button>
           </div>
         </div>
         <div class="team-row" onclick="selectMember(this)">
@@ -300,11 +296,45 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 <div class="toast" id="toast"></div>
 
 <script>
+const members = [
+  {
+    name: 'BRITTANY AMELL', role: 'TRADER',
+    quote: '"Ten years ago I decided I didn\'t want a career I couldn\'t be passionate about and that\'s how I came to coffee. I came for the coffee but stayed for the people. Brainstorming solutions with talented and interesting people is the best part of my job."',
+    stats: [['FAVORITE HOLIDAY','Halloween'],['FIRST ORIGIN TRIP','Colombia 2016'],['FIRST ALBUM OWNED','Britney Spears, Baby One More Time']]
+  },
+  {
+    name: 'MICHELLE ANARIBA', role: 'QUALITY CONTROL MANAGER',
+    quote: '"Quality is not just a checklist — it\'s a conversation between the farmer, the land, and the cup. Every lot tells a story and my job is to make sure that story is told honestly."',
+    stats: [['FAVORITE ORIGIN','Guatemala'],['YEARS AT COVOYA','7'],['COFFEE ORDER','Washed Ethiopian, no milk']]
+  },
+  {
+    name: 'ERICK ARMBRUST', role: 'TRADE COORDINATOR',
+    quote: '"Coffee trading is part logistics puzzle, part relationship building. Every shipment represents months of trust between producers and roasters — I take that seriously."',
+    stats: [['FAVORITE ORIGIN','Colombia'],['FIRST ORIGIN TRIP','Honduras 2018'],['HIDDEN TALENT','Semi-pro chess player']]
+  },
+  {
+    name: 'MARINA BORISOV', role: 'LOGISTICS COORDINATOR',
+    quote: '"Getting coffee from a farm in Ethiopia to a roaster in Portland on time and in perfect condition is genuinely thrilling. The complexity keeps me sharp every single day."',
+    stats: [['FAVORITE HOLIDAY','New Year\'s Eve'],['LANGUAGES SPOKEN','English, Russian, Spanish'],['COFFEE ORDER','Double espresso']]
+  },
+  {
+    name: 'LIESA COLLINS', role: 'SENIOR TRADE ANALYST',
+    quote: '"Data is the language of trust in green coffee. When I can show a roaster exactly where their lot came from and why it performed the way it did, that\'s when the relationship deepens."',
+    stats: [['FAVORITE ORIGIN','Kenya'],['FIRST ORIGIN TRIP','Rwanda 2015'],['FIRST ALBUM OWNED','No Doubt, Tragic Kingdom']]
+  },
+  {
+    name: 'ERIK DELLA POSTA', role: 'SENIOR OPERATIONS PROCESS MANAGER',
+    quote: '"Operations is the invisible backbone of everything we do. When it\'s working well no one notices — and that\'s exactly how I like it. The team gets the glory; I get the efficiency."',
+    stats: [['FAVORITE HOLIDAY','Thanksgiving'],['YEARS AT COVOYA','9'],['COFFEE ORDER','Batch brew, black']]
+  }
+];
+
 function selectMember(el){
   const rows = Array.from(document.querySelectorAll('.team-row'));
   rows.forEach(r=>r.classList.remove('active'));
   el.classList.add('active');
   const idx = rows.indexOf(el);
+
   const track = document.getElementById('scrollTrack');
   const thumb = document.getElementById('scrollThumb');
   const trackH = track.clientHeight;
@@ -313,18 +343,24 @@ function selectMember(el){
   const pct = rows.length > 1 ? idx / (rows.length - 1) : 0;
   thumb.style.top = Math.round(pct * maxTop) + 'px';
 
-  const card = document.getElementById('brittanyCard');
-  if(idx === 0){
-    const nameEl = el.querySelector('.name');
-    const nameRect = nameEl.getBoundingClientRect();
-    const listRect = document.getElementById('teamList').getBoundingClientRect();
-    const top = nameRect.top - listRect.top - 200;
-    card.style.top = Math.max(0, top) + 'px';
-    card.style.left = (-495 - 120) + 'px';
-    card.classList.add('visible');
-  } else {
-    card.classList.remove('visible');
-  }
+  const m = members[idx];
+  const card = document.getElementById('profileCard');
+  document.getElementById('cardName').textContent = m.name;
+  document.getElementById('cardRole').textContent = m.role;
+  document.getElementById('cardQuote').textContent = m.quote;
+  document.getElementById('cardCta').textContent = 'Learn more about ' + m.name.split(' ')[0].charAt(0) + m.name.split(' ')[0].slice(1).toLowerCase();
+  document.getElementById('cardCta').onclick = () => showToast('Opening ' + m.name.split(' ')[0].charAt(0) + m.name.split(' ')[0].slice(1).toLowerCase() + '\'s full profile…');
+
+  const statsEl = document.getElementById('cardStats');
+  statsEl.innerHTML = m.stats.map(([l,v])=>`<div class="profile-stat"><span class="profile-stat-label">${l}</span><span class="profile-stat-val">${v}</span></div>`).join('');
+
+  const teamSection = document.querySelector('.team-section');
+  const rowRect = el.getBoundingClientRect();
+  const sectionRect = teamSection.getBoundingClientRect();
+  const cardTop = rowRect.top - sectionRect.top - 200;
+  card.style.top = Math.max(60, Math.min(cardTop, teamSection.offsetHeight - card.offsetHeight - 40)) + 'px';
+  card.style.left = (-495 - 120) + 'px';
+  card.classList.add('visible');
 }
 
 function initScrollbar(){
