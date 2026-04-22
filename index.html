@@ -43,21 +43,15 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 .profile-card{position:absolute;width:495px;background:#fff;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.25);opacity:0;pointer-events:none;transition:opacity 0.25s ease;z-index:10;overflow:hidden}
 .profile-card.visible{opacity:1;pointer-events:all}
 .profile-photo-wrap{position:relative;width:495px;height:495px;overflow:hidden;background:#ec8b6e}
-.profile-photo-bg{position:absolute;inset:0;background:#ec8b6e}
-.profile-photo-texture{position:absolute;inset:0;mix-blend-mode:soft-light;overflow:hidden}
-.profile-photo-texture img{position:absolute;height:137.63%;left:0;top:-0.01%;width:100%;object-fit:cover}
-.profile-photo-overlay{position:absolute;inset:0;object-fit:cover;opacity:0.3}
-.profile-photo-cutout{position:absolute;left:10px;top:15px;width:473px;height:466px}
-.profile-photo-squiggle{position:absolute;left:-29px;top:24px;width:486px;height:508px}
-.profile-photo-person{position:absolute;left:-46px;top:0;width:638px;height:638px;object-fit:cover}
+.profile-photo-main{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
 .profile-photo-wrap img.torn{position:absolute;bottom:-2px;left:0;width:100%;z-index:2}
-.profile-title-wrap{position:absolute;left:68px;bottom:60px;z-index:3;width:344px;height:110px}
-.profile-name-badge{position:absolute;top:0;left:0;background:#adce9f;padding:12px 36px;border-radius:2px;transform:rotate(2.94deg);overflow:hidden}
-.profile-name-badge-texture{position:absolute;inset:0;mix-blend-mode:soft-light;object-fit:cover}
-.profile-name-badge span{font-family:'Staatliches',sans-serif;font-size:44px;color:#212121;white-space:nowrap;position:relative;z-index:1}
-.profile-role-badge{position:absolute;top:52px;left:120px;background:#1263c9;padding:8px 12px;border-radius:2px;transform:rotate(-3.85deg);overflow:hidden}
+.profile-title-wrap{position:absolute;left:20px;bottom:50px;z-index:3;width:380px}
+.profile-name-badge{position:relative;display:inline-block;background:#adce9f;padding:10px 28px;border-radius:2px;transform:rotate(2.94deg);overflow:hidden;margin-bottom:6px}
+.profile-name-badge-texture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:soft-light;pointer-events:none}
+.profile-name-badge span{font-family:'Staatliches',sans-serif;font-size:36px;color:#212121;white-space:nowrap;position:relative;z-index:1;letter-spacing:1px;font-weight:900}
+.profile-role-badge{position:relative;display:inline-block;background:#1263c9;padding:6px 14px;border-radius:2px;transform:rotate(-3.85deg);overflow:hidden;margin-left:60px}
 .profile-role-badge-texture{position:absolute;inset:0;mix-blend-mode:soft-light;background-size:100px 100px;background-position:top left}
-.profile-role-badge span{font-family:'Staatliches',sans-serif;font-size:26px;color:#fff;white-space:nowrap;position:relative;z-index:1}
+.profile-role-badge span{font-family:'Staatliches',sans-serif;font-size:22px;color:#fff;white-space:nowrap;position:relative;z-index:1;letter-spacing:1px}
 .profile-body{padding:32px 48px 28px;background:#fff}
 .profile-quote{font-family:'Quicksand',sans-serif;font-size:16px;font-weight:700;color:#212121;text-align:center;line-height:1.6;margin-bottom:24px}
 .profile-stats{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
@@ -194,13 +188,7 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
       <div class="team-list" id="teamList">
         <div class="profile-card" id="profileCard">
           <div class="profile-photo-wrap">
-            <div class="profile-photo-bg"></div>
-            <div class="profile-photo-texture"><img src="https://www.figma.com/api/mcp/asset/e1cf5555-ebf5-4f3c-9458-510208abd374" alt=""/></div>
-            <img class="profile-photo-overlay" src="https://www.figma.com/api/mcp/asset/fb139de2-b68a-4761-8434-a10edb7121ce" alt=""/>
-            <div class="profile-photo-cutout">
-              <img class="profile-photo-squiggle" src="https://www.figma.com/api/mcp/asset/792c5401-d059-442b-85ef-acf20f655610" alt=""/>
-              <img class="profile-photo-person" src="https://www.figma.com/api/mcp/asset/fb4f3997-cc62-4352-9ee0-9cc01e497662" alt="Brittany Amell"/>
-            </div>
+            <img class="profile-photo-main" src="https://www.figma.com/api/mcp/asset/e1cf5555-ebf5-4f3c-9458-510208abd374" alt="Team member"/>
             <img class="torn" src="https://www.figma.com/api/mcp/asset/b44c9552-9705-4310-a86d-c28cdbfd2e86" alt=""/>
             <div class="profile-title-wrap">
               <div class="profile-name-badge">
