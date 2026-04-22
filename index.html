@@ -11,13 +11,12 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 
 /* HEADER */
 .header{background:#fff6ed;height:157px;width:1440px;position:relative}
-.logo-area{position:absolute;left:62px;top:20px;display:flex;flex-direction:column;align-items:flex-start}
+.logo-area{position:absolute;left:62px;top:20px}
 .logo-text{font-family:'Staatliches',sans-serif;font-size:38px;color:#212121;letter-spacing:1px;line-height:1}
 .logo-sub{font-family:'Quicksand',sans-serif;font-size:11px;color:#212121;letter-spacing:2px;text-transform:uppercase;margin-top:2px}
-.nav-top{position:absolute;right:90px;top:39px;display:flex;gap:24px;align-items:center;font-family:'Quicksand',sans-serif;font-size:14px;color:#212121;letter-spacing:0.3px}
-.nav-top a{color:#212121;text-decoration:none;cursor:pointer;white-space:nowrap}
+.nav-top{position:absolute;right:90px;top:39px;display:flex;gap:24px;align-items:center;font-family:'Quicksand',sans-serif;font-size:14px;color:#212121}
+.nav-top a{color:#212121;text-decoration:none;cursor:pointer}
 .nav-top a:hover{text-decoration:underline}
-.nav-divider{color:#ccc}
 .cart-icon{position:absolute;right:62px;top:38px;cursor:pointer;font-size:18px}
 .search-area{position:absolute;left:450px;top:100px}
 .search-area input{font-family:'Quicksand',sans-serif;font-size:14px;color:#212121;background:transparent;border:none;border-bottom:1px solid #212121;padding:4px 4px 4px 0;width:300px;outline:none}
@@ -27,7 +26,7 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 .sub-nav a:hover{color:#8aa57f}
 
 /* BREADCRUMB */
-.breadcrumb{background:#8aa57f;height:56px;display:flex;align-items:center;padding:0 62px;font-family:'Quicksand',sans-serif;font-size:16px;color:#212121;letter-spacing:0.25px}
+.breadcrumb{background:#8aa57f;height:56px;display:flex;align-items:center;padding:0 62px;font-family:'Quicksand',sans-serif;font-size:16px;color:#212121}
 .breadcrumb a{color:#212121;text-decoration:underline;cursor:pointer}
 
 /* HERO */
@@ -35,52 +34,47 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 .hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
 .hero-title{position:absolute;bottom:60px;left:745px;font-family:'Staatliches',sans-serif;font-size:125px;color:#fff;line-height:100px;letter-spacing:2px;white-space:nowrap;text-shadow:0 2px 20px rgba(0,0,0,0.3)}
 
-/* INTRO TEXT */
+/* INTRO */
 .intro{background:#fff;padding:80px 72px;text-align:center}
 .intro p{font-family:'Quicksand',sans-serif;font-size:16px;font-weight:500;line-height:1.7;color:#212121;max-width:1116px;margin:0 auto}
 
-/* PROFILE CARD */
-.profile-card{position:absolute;width:495px;background:#fff;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.25);opacity:0;pointer-events:none;transition:opacity 0.25s ease;z-index:10;overflow:hidden}
-.profile-card.visible{opacity:1;pointer-events:all}
-.profile-photo-wrap{position:relative;width:495px;height:495px;overflow:hidden;background:#ec8b6e}
-.profile-photo-main{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
-.profile-photo-wrap img.torn{position:absolute;bottom:-2px;left:0;width:100%;z-index:2}
-.profile-title-wrap{position:absolute;left:20px;bottom:50px;z-index:3;width:380px}
-.profile-name-badge{position:relative;display:inline-block;background:#adce9f;padding:10px 28px;border-radius:2px;transform:rotate(2.94deg);overflow:hidden;margin-bottom:6px}
-.profile-name-badge-texture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:soft-light;pointer-events:none}
-.profile-name-badge span{font-family:'Staatliches',sans-serif;font-size:36px;color:#212121;white-space:nowrap;position:relative;z-index:1;letter-spacing:1px;font-weight:900}
-.profile-role-badge{position:relative;display:inline-block;background:#1263c9;padding:6px 14px;border-radius:2px;transform:rotate(-3.85deg);overflow:hidden;margin-left:60px}
-.profile-role-badge-texture{position:absolute;inset:0;mix-blend-mode:soft-light;background-size:100px 100px;background-position:top left}
-.profile-role-badge span{font-family:'Staatliches',sans-serif;font-size:22px;color:#fff;white-space:nowrap;position:relative;z-index:1;letter-spacing:1px}
-.profile-body{padding:32px 48px 28px;background:#fff}
-.profile-quote{font-family:'Quicksand',sans-serif;font-size:16px;font-weight:700;color:#212121;text-align:center;line-height:1.6;margin-bottom:24px}
-.profile-stats{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
-.profile-stat{display:flex;gap:28px;align-items:flex-start}
-.profile-stat-label{font-family:'Quicksand',sans-serif;font-size:13px;font-weight:700;color:#212121;white-space:nowrap;width:150px;flex-shrink:0}
-.profile-stat-val{font-family:'Quicksand',sans-serif;font-size:13px;font-weight:500;color:#212121}
-.profile-cta{display:block;width:100%;background:#adce9f;color:#212121;font-family:'Quicksand',sans-serif;font-size:16px;font-weight:700;border:none;border-radius:2px;padding:12px;cursor:pointer;text-align:center}
-.profile-cta:hover{background:#8fba81}
-
-/* TEAM LIST */
+/* TEAM SECTION */
 .team-section{position:relative;background:#343e30;padding:80px 0 80px 0;overflow:hidden}
 .team-bg-overlay{position:absolute;inset:0;opacity:0.3}
 .team-bg-overlay img{width:100%;height:100%;object-fit:cover}
 .team-inner{position:relative;z-index:1;padding:0 101px}
 .team-title{font-family:'Staatliches',sans-serif;font-size:64px;color:#fff6ed;margin-bottom:40px;letter-spacing:1px}
 .team-grid{display:flex;gap:60px}
-.team-photo{width:500px;flex-shrink:0;position:relative}
-.team-photo img{width:100%;border-radius:4px}
-.team-list{flex:1}
-.team-divider{height:1px;background:rgba(255,246,237,0.3);margin:0}
-.team-row{padding:18px 0;cursor:pointer;transition:all 0.2s;border-bottom:1px solid rgba(255,246,237,0.15)}
-.team-row:hover,.team-row.active{opacity:1 !important}
-.team-row .name{font-family:'Staatliches',sans-serif;font-size:64px;color:#fff6ed;line-height:1;letter-spacing:0.5px;opacity:0.5;transition:opacity 0.2s}
+.team-list{flex:1;position:relative}
+.team-row{padding:18px 0;cursor:pointer;border-bottom:1px solid rgba(255,246,237,0.15);transition:all 0.2s}
+.team-row .name{font-family:'Staatliches',sans-serif;font-size:64px;color:#fff6ed;line-height:1;letter-spacing:0.5px;opacity:0.5;transition:opacity 0.2s;text-decoration:none}
 .team-row .role{font-family:'Staatliches',sans-serif;font-size:28px;color:#fff6ed;letter-spacing:1px;text-transform:uppercase;opacity:0.5;transition:opacity 0.2s}
 .team-row:hover .name,.team-row.active .name{opacity:1;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
 .team-row:hover .role,.team-row.active .role{opacity:1}
-.scrollbar-wrap{position:absolute;right:60px;top:0;bottom:0;display:flex;align-items:flex-start;padding-top:175px;padding-bottom:60px}
+.scrollbar-wrap{position:absolute;right:-40px;top:0;bottom:0;display:flex;padding-top:8px;padding-bottom:8px}
 .scrollbar-track{position:relative;width:12px;height:100%;background:rgba(255,246,237,0.25);border-radius:12px;overflow:hidden}
 .scrollbar-thumb{position:absolute;top:0;left:0;width:12px;background:#fff6ed;border-radius:12px;transition:top 0.35s cubic-bezier(.4,0,.2,1)}
+
+/* PROFILE CARD */
+.profile-card{position:absolute;width:420px;background:#fff;border-radius:4px;box-shadow:0 8px 40px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity 0.25s ease;z-index:10;overflow:hidden;top:0;left:0}
+.profile-card.visible{opacity:1;pointer-events:all}
+.profile-photo-wrap{position:relative;width:420px;height:420px;overflow:hidden;background:#ec8b6e}
+.profile-photo-main{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.profile-title-wrap{position:absolute;left:20px;bottom:30px;z-index:3;width:380px}
+.profile-name-badge{position:relative;display:inline-block;background:#adce9f;padding:8px 24px;border-radius:2px;transform:rotate(2.94deg);overflow:hidden;margin-bottom:6px}
+.profile-name-badge-texture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:soft-light;pointer-events:none}
+.profile-name-badge span{font-family:'Staatliches',sans-serif;font-size:32px;color:#212121;white-space:nowrap;position:relative;z-index:1;letter-spacing:1px}
+.profile-role-badge{position:relative;display:inline-block;background:#1263c9;padding:5px 12px;border-radius:2px;transform:rotate(-3.85deg);overflow:hidden;margin-left:50px}
+.profile-role-badge-texture{position:absolute;inset:0;mix-blend-mode:soft-light;background-size:100px 100px}
+.profile-role-badge span{font-family:'Staatliches',sans-serif;font-size:20px;color:#fff;white-space:nowrap;position:relative;z-index:1;letter-spacing:1px}
+.profile-body{padding:24px 32px 20px;background:#fff}
+.profile-quote{font-family:'Quicksand',sans-serif;font-size:14px;font-weight:700;color:#212121;text-align:center;line-height:1.6;margin-bottom:18px}
+.profile-stats{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.profile-stat{display:flex;gap:20px;align-items:flex-start}
+.profile-stat-label{font-family:'Quicksand',sans-serif;font-size:12px;font-weight:700;color:#212121;white-space:nowrap;width:140px;flex-shrink:0}
+.profile-stat-val{font-family:'Quicksand',sans-serif;font-size:12px;font-weight:500;color:#212121}
+.profile-cta{display:block;width:100%;background:#adce9f;color:#212121;font-family:'Quicksand',sans-serif;font-size:15px;font-weight:700;border:none;border-radius:2px;padding:10px;cursor:pointer;text-align:center}
+.profile-cta:hover{background:#8fba81}
 
 /* CONTACT CTA */
 .contact-cta{position:relative;height:300px;display:flex;align-items:center;justify-content:center;gap:16px;overflow:hidden}
@@ -104,7 +98,6 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 .footer-podcast-card img{width:160px;height:160px;object-fit:cover;border-radius:4px}
 .footer-podcast-label{font-family:'Staatliches',sans-serif;font-size:20px;color:#212121;text-transform:uppercase;letter-spacing:0.5px}
 .footer-podcast-desc{font-family:'Quicksand',sans-serif;font-size:18px;font-weight:300;color:#212121}
-.footer-right{}
 .newsletter-label{font-family:'Quicksand',sans-serif;font-size:18px;font-weight:500;color:#212121;margin-bottom:16px}
 .newsletter-form{display:flex;gap:8px;margin-bottom:40px}
 .newsletter-form input{font-family:'Quicksand',sans-serif;font-size:14px;border:2px solid #212121;border-radius:2px;padding:10px 16px;width:300px;outline:none;background:#fff}
@@ -121,7 +114,7 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 .footer-links a{color:#212121;text-decoration:none;cursor:pointer}
 .footer-links a:hover{text-decoration:underline}
 .footer-divider{color:#ccc;padding:0 4px}
-.footer-copy{font-family:'Quicksand',sans-serif;font-size:13px;color:#212121;margin-top:16px;text-transform:capitalize}
+.footer-copy{font-family:'Quicksand',sans-serif;font-size:13px;color:#212121;margin-top:16px}
 
 /* TOAST */
 .toast{position:fixed;bottom:32px;right:32px;background:#212121;color:#fff6ed;font-family:'Quicksand',sans-serif;font-size:15px;padding:14px 24px;border-radius:4px;opacity:0;transition:opacity 0.3s;z-index:999;pointer-events:none}
@@ -144,7 +137,7 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
     <a href="#">Support</a>
     <a href="#">Podcast</a>
     <a href="#">Blog</a>
-    <span class="nav-divider">|</span>
+    <span style="color:#ccc">|</span>
     <a href="#">Log In</a>
     <span style="color:#888">or</span>
     <a href="#">Create an Account</a>
@@ -177,18 +170,17 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
   <p>You'll find the word "collaboration" used a lot by our team members – but not because our name reflects the idea that coffee is a collaborative voyage. Rather, we chose the name Covoya because collaboration was already at the center of everything we do. It's in our DNA, almost a part of the air that we breathe: with our suppliers, our customers and each other. It's a journey that moves beyond the transactional and becomes a true investment in the success of our partners in both directions on the supply chain.</p>
 </div>
 
-<!-- TEAM LIST -->
+<!-- TEAM SECTION -->
 <div class="team-section">
   <div class="team-inner">
     <div class="team-title">Our team</div>
     <div class="team-grid">
-      <div class="team-photo">
-        <img src="https://www.figma.com/api/mcp/asset/81d66034-9f14-4f2f-8de4-d01341425580" alt="Team" style="width:100%;border-radius:4px"/>
-      </div>
       <div class="team-list" id="teamList">
+
+        <!-- PROFILE CARD -->
         <div class="profile-card" id="profileCard">
           <div class="profile-photo-wrap">
-            <img class="profile-photo-main" src="https://www.figma.com/api/mcp/asset/e1cf5555-ebf5-4f3c-9458-510208abd374" alt="Team member" id="cardPhoto"/>
+            <img class="profile-photo-main" id="cardPhoto" src="https://www.figma.com/api/mcp/asset/e1cf5555-ebf5-4f3c-9458-510208abd374" alt="Team member"/>
             <div class="profile-title-wrap">
               <div class="profile-name-badge">
                 <img class="profile-name-badge-texture" src="https://www.figma.com/api/mcp/asset/22c1e55c-1305-4dce-a975-d218de8372c7" alt=""/>
@@ -201,41 +193,47 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
             </div>
           </div>
           <div class="profile-body">
-            <p class="profile-quote" id="cardQuote">"Ten years ago I decided I didn't want a career I couldn't be passionate about and that's how I came to coffee. I came for the coffee but stayed for the people."</p>
-            <div class="profile-stats" id="cardStats"></div>
-            <button class="profile-cta" id="cardCta">Learn more</button>
+            <p class="profile-quote" id="cardQuote">"Ten years ago I decided I didn't want a career I couldn't be passionate about and that's how I came to coffee."</p>
+            <div class="profile-stats" id="cardStats">
+              <div class="profile-stat"><span class="profile-stat-label">FAVORITE HOLIDAY</span><span class="profile-stat-val">Halloween</span></div>
+              <div class="profile-stat"><span class="profile-stat-label">FIRST ORIGIN TRIP</span><span class="profile-stat-val">Colombia 2016</span></div>
+              <div class="profile-stat"><span class="profile-stat-label">FIRST ALBUM OWNED</span><span class="profile-stat-val">Britney Spears, Baby One More Time</span></div>
+            </div>
+            <button class="profile-cta" id="cardCta" onclick="showToast('Opening profile…')">Learn more about Brittany</button>
           </div>
         </div>
-        <div class="team-row" onclick="selectMember(this)">
+
+        <div class="team-row" onclick="selectMember(this, 0)">
           <div class="name">Brittany Amell</div>
           <div class="role">Trader</div>
         </div>
-        <div class="team-row" onclick="selectMember(this)">
+        <div class="team-row" onclick="selectMember(this, 1)">
           <div class="name">Michelle Anariba</div>
           <div class="role">Quality Control Manager</div>
         </div>
-        <div class="team-row" onclick="selectMember(this)">
+        <div class="team-row" onclick="selectMember(this, 2)">
           <div class="name">Erick Armbrust</div>
           <div class="role">Trade Coordinator</div>
         </div>
-        <div class="team-row" onclick="selectMember(this)">
+        <div class="team-row" onclick="selectMember(this, 3)">
           <div class="name">Marina Borisov</div>
           <div class="role">Logistics Coordinator</div>
         </div>
-        <div class="team-row" onclick="selectMember(this)">
+        <div class="team-row" onclick="selectMember(this, 4)">
           <div class="name">Liesa Collins</div>
           <div class="role">Senior Trade Analyst</div>
         </div>
-        <div class="team-row" onclick="selectMember(this)">
+        <div class="team-row" onclick="selectMember(this, 5)">
           <div class="name">Erik Della Posta</div>
           <div class="role">Senior Operations Process Manager</div>
         </div>
+
+        <div class="scrollbar-wrap">
+          <div class="scrollbar-track" id="scrollTrack">
+            <div class="scrollbar-thumb" id="scrollThumb"></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="scrollbar-wrap">
-    <div class="scrollbar-track" id="scrollTrack">
-      <div class="scrollbar-thumb" id="scrollThumb"></div>
     </div>
   </div>
 </div>
@@ -253,7 +251,7 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 <!-- ALSO OF INTEREST -->
 <div class="also">
   <span class="also-label">Also of Interest</span>
-  <a href="#" onclick="showToast('Opening: Source Green Coffee for your Roasting Business')">Source Green Coffee for your Roasting Business</a>
+  <a href="#" onclick="showToast('Opening: Source Green Coffee')">Source Green Coffee for your Roasting Business</a>
   <a href="#" onclick="showToast('Opening: Ethiopian Green Coffee')">Ethiopian Green Coffee</a>
   <a href="#" onclick="showToast('Opening: New Coffee')">New Coffee</a>
 </div>
@@ -273,7 +271,7 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
         <div class="footer-podcast-desc">Covoya Specialty Coffee Blog</div>
       </div>
     </div>
-    <div class="footer-right">
+    <div>
       <div class="newsletter-label">Stay in the know for news, arrivals and all things green coffee!</div>
       <div class="newsletter-form">
         <input type="email" placeholder="Enter Email Address"/>
@@ -306,10 +304,10 @@ body{background:#fff6ed;font-family:'Quicksand',sans-serif;width:1440px;overflow
 <div class="toast" id="toast"></div>
 
 <script>
-const members = [
+var members = [
   {
     name: 'BRITTANY AMELL', role: 'TRADER',
-    quote: '"Ten years ago I decided I didn\'t want a career I couldn\'t be passionate about and that\'s how I came to coffee. I came for the coffee but stayed for the people. Brainstorming solutions with talented and interesting people is the best part of my job."',
+    quote: '"Ten years ago I decided I didn\'t want a career I couldn\'t be passionate about and that\'s how I came to coffee. I came for the coffee but stayed for the people."',
     stats: [['FAVORITE HOLIDAY','Halloween'],['FIRST ORIGIN TRIP','Colombia 2016'],['FIRST ALBUM OWNED','Britney Spears, Baby One More Time']]
   },
   {
@@ -334,68 +332,53 @@ const members = [
   },
   {
     name: 'ERIK DELLA POSTA', role: 'SENIOR OPERATIONS PROCESS MANAGER',
-    quote: '"Operations is the invisible backbone of everything we do. When it\'s working well no one notices — and that\'s exactly how I like it. The team gets the glory; I get the efficiency."',
+    quote: '"Operations is the invisible backbone of everything we do. When it\'s working well no one notices — and that\'s exactly how I like it."',
     stats: [['FAVORITE HOLIDAY','Thanksgiving'],['YEARS AT COVOYA','9'],['COFFEE ORDER','Batch brew, black']]
   }
 ];
 
-function selectMember(el){
-  const rows = Array.from(document.querySelectorAll('.team-row'));
-  rows.forEach(r=>r.classList.remove('active'));
+function selectMember(el, idx) {
+  document.querySelectorAll('.team-row').forEach(function(r) { r.classList.remove('active'); });
   el.classList.add('active');
-  const idx = rows.indexOf(el);
 
-  const track = document.getElementById('scrollTrack');
-  const thumb = document.getElementById('scrollThumb');
-  const trackH = track.clientHeight;
-  const thumbH = thumb.clientHeight;
-  const maxTop = trackH - thumbH;
-  const pct = rows.length > 1 ? idx / (rows.length - 1) : 0;
+  var track = document.getElementById('scrollTrack');
+  var thumb = document.getElementById('scrollThumb');
+  var maxTop = track.clientHeight - thumb.clientHeight;
+  var pct = idx / (members.length - 1);
   thumb.style.top = Math.round(pct * maxTop) + 'px';
 
-  const m = members[idx];
-  const card = document.getElementById('profileCard');
+  var m = members[idx];
   document.getElementById('cardName').textContent = m.name;
   document.getElementById('cardRole').textContent = m.role;
   document.getElementById('cardQuote').textContent = m.quote;
-  document.getElementById('cardCta').textContent = 'Learn more about ' + m.name.split(' ')[0].charAt(0) + m.name.split(' ')[0].slice(1).toLowerCase();
-  document.getElementById('cardCta').onclick = () => showToast('Opening ' + m.name.split(' ')[0].charAt(0) + m.name.split(' ')[0].slice(1).toLowerCase() + '\'s full profile…');
+  var firstName = m.name.charAt(0) + m.name.split(' ')[0].slice(1).toLowerCase();
+  document.getElementById('cardCta').textContent = 'Learn more about ' + firstName;
+  document.getElementById('cardStats').innerHTML = m.stats.map(function(s) {
+    return '<div class="profile-stat"><span class="profile-stat-label">' + s[0] + '</span><span class="profile-stat-val">' + s[1] + '</span></div>';
+  }).join('');
 
-  const statsEl = document.getElementById('cardStats');
-  statsEl.innerHTML = m.stats.map(([l,v])=>`<div class="profile-stat"><span class="profile-stat-label">${l}</span><span class="profile-stat-val">${v}</span></div>`).join('');
-
-  const teamSection = document.querySelector('.team-section');
-  const rowRect = el.getBoundingClientRect();
-  const sectionRect = teamSection.getBoundingClientRect();
-  const cardTop = rowRect.top - sectionRect.top - 200;
-  const firstRow = rows[0];
-  const sectionRect = document.querySelector('.team-section').getBoundingClientRect();
-  const firstRowRect = firstRow.getBoundingClientRect();
-  const topOffset = firstRowRect.top - sectionRect.top;
-  card.style.top = topOffset + 'px';
-  card.style.left = '101px';
-  card.style.right = 'auto';
+  var card = document.getElementById('profileCard');
+  card.style.top = '0px';
+  card.style.left = '0px';
   card.classList.add('visible');
 }
 
-function initScrollbar(){
-  const rows = document.querySelectorAll('.team-row');
-  const track = document.getElementById('scrollTrack');
-  const thumb = document.getElementById('scrollThumb');
-  const thumbH = Math.round(track.clientHeight / rows.length);
-  thumb.style.height = thumbH + 'px';
-  thumb.style.top = '0px';
-}
-
-function showToast(msg){
-  var t=document.getElementById('toast');
-  t.textContent=msg;
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
   t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2000);
+  setTimeout(function() { t.classList.remove('show'); }, 2000);
 }
 
-document.querySelectorAll('a[href="#"]').forEach(a=>{
-  a.addEventListener('click',e=>e.preventDefault());
+function initScrollbar() {
+  var rows = document.querySelectorAll('.team-row');
+  var track = document.getElementById('scrollTrack');
+  var thumb = document.getElementById('scrollThumb');
+  thumb.style.height = Math.round(track.clientHeight / rows.length) + 'px';
+}
+
+document.querySelectorAll('a[href="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) { e.preventDefault(); });
 });
 
 window.addEventListener('load', initScrollbar);
