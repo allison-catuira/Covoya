@@ -8,12 +8,12 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: #fff6ed; font-family: 'Quicksand', sans-serif; min-width: 1440px; max-width: 1920px; margin: 0 auto; overflow-x: hidden; }
 
-/* HEADER */
+/* ── HEADER ── */
 .header { background: #fff6ed; height: 157px; width: 100%; position: relative; }
 .logo-area { position: absolute; left: 4.3%; top: 20px; }
 .logo-text { font-family: 'Staatliches', sans-serif; font-size: 38px; color: #212121; line-height: 1; }
 .logo-sub { font-size: 11px; color: #212121; letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
-.nav-top { position: absolute; right: 6.5%; top: 39px; display: flex; gap: 24px; align-items: center; font-size: 14px; color: #212121; }
+.nav-top { position: absolute; right: 6.5%; top: 39px; display: flex; gap: 24px; align-items: center; font-size: 14px; }
 .nav-top a { color: #212121; text-decoration: none; }
 .nav-top a:hover { text-decoration: underline; }
 .cart-icon { position: absolute; right: 4.3%; top: 38px; font-size: 18px; cursor: pointer; }
@@ -24,20 +24,20 @@ body { background: #fff6ed; font-family: 'Quicksand', sans-serif; min-width: 144
 .sub-nav a { color: #212121; text-decoration: none; }
 .sub-nav a:hover { color: #8aa57f; }
 
-/* BREADCRUMB */
+/* ── BREADCRUMB ── */
 .breadcrumb { background: #8aa57f; height: 56px; display: flex; align-items: center; padding: 0 4.3%; font-size: 16px; color: #212121; }
 .breadcrumb a { color: #212121; text-decoration: underline; cursor: pointer; }
 
-/* HERO */
+/* ── HERO ── */
 .hero { position: relative; height: 487px; overflow: hidden; background: #71a1df; }
 .hero-bg-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .hero-title { position: absolute; bottom: 60px; left: 51.7%; font-family: 'Staatliches', sans-serif; font-size: clamp(80px, 8.7vw, 125px); color: #fff; line-height: 1; letter-spacing: 2px; white-space: nowrap; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
 
-/* INTRO */
+/* ── INTRO ── */
 .intro { background: #fff; padding: 80px 5%; text-align: center; }
 .intro p { font-size: 16px; font-weight: 500; line-height: 1.7; color: #212121; max-width: 1116px; margin: 0 auto; }
 
-/* TEAM SECTION */
+/* ── TEAM SECTION ── */
 .team-section { position: relative; width: 100%; height: 1255px; overflow: hidden; }
 .team-layer-bg { position: absolute; inset: 0; background: #343e30; z-index: 0; }
 .team-layer-texture { position: absolute; inset: 0; z-index: 1; mix-blend-mode: multiply; opacity: 0.3; overflow: hidden; pointer-events: none; }
@@ -47,10 +47,12 @@ body { background: #fff6ed; font-family: 'Quicksand', sans-serif; min-width: 144
 .team-title { position: absolute; left: 7%; top: 81px; font-family: 'Staatliches', sans-serif; font-size: 64px; color: #fff6ed; white-space: nowrap; z-index: 3; pointer-events: none; }
 .team-divider-top { position: absolute; left: 7%; top: 175px; right: 7%; height: 3px; z-index: 3; pointer-events: none; }
 .team-divider-top img { width: 100%; height: 100%; }
+
+/* ── TEAM NAME LIST ── */
 .team-names-scroll { position: absolute; left: 7%; top: 263px; right: 7%; height: 700px; overflow-y: auto; overflow-x: hidden; z-index: 4; }
 .team-names-scroll::-webkit-scrollbar { display: none; }
 .team-names-inner { width: 100%; }
-.team-member { padding: 18px 0; cursor: pointer; border-bottom: 1px solid rgba(255,246,237,0.15); display: flex; flex-direction: column; align-items: flex-end; padding-right: 60px; }
+.team-member { padding: 18px 60px 18px 0; cursor: pointer; border-bottom: 1px solid rgba(255,246,237,0.15); display: flex; flex-direction: column; align-items: flex-end; }
 .team-member .name { font-family: 'Staatliches', sans-serif; font-size: clamp(48px, 5vw, 72px); color: #fff6ed; opacity: 0.5; line-height: 1; white-space: nowrap; transition: opacity 0.2s; }
 .team-member .role { font-family: 'Staatliches', sans-serif; font-size: clamp(24px, 2.5vw, 36px); color: #fff6ed; opacity: 0.5; white-space: nowrap; transition: opacity 0.2s; }
 .team-member:hover .name { opacity: 1; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
@@ -58,12 +60,12 @@ body { background: #fff6ed; font-family: 'Quicksand', sans-serif; min-width: 144
 .team-member.active .name { opacity: 1; }
 .team-member.active .role { opacity: 1; }
 
-/* PROFILE CARD */
+/* ── PROFILE CARD ── */
 .profile-card { position: absolute; top: 263px; left: 7%; width: 420px; border-radius: 4px; box-shadow: 0 8px 40px rgba(0,0,0,0.35); opacity: 0; pointer-events: none; transition: opacity 0.25s ease; z-index: 6; overflow: hidden; }
 .profile-card.visible { opacity: 1; pointer-events: all; }
 .profile-photo-wrap { position: relative; width: 420px; height: 560px; overflow: hidden; background: #ec8b6e; }
 .profile-photo-main { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-.profile-title-wrap { position: absolute; left: 60px; top: calc(50% - 20px); bottom: auto; transform: translateY(-50%); z-index: 3; width: 380px; display: flex; flex-direction: column; gap: 8px; }
+.profile-title-wrap { position: absolute; left: 60px; top: calc(50% - 10px); transform: translateY(-50%); z-index: 3; width: 340px; display: flex; flex-direction: column; gap: 8px; }
 .profile-name-badge { position: relative; display: inline-block; background: #adce9f; padding: 8px 24px; border-radius: 2px; transform: rotate(2.94deg); overflow: hidden; align-self: flex-start; }
 .profile-name-badge-texture { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; mix-blend-mode: soft-light; pointer-events: none; }
 .profile-name-badge span { font-family: 'Staatliches', sans-serif; font-size: 32px; color: #212121; white-space: nowrap; position: relative; z-index: 1; letter-spacing: 1px; }
@@ -79,7 +81,7 @@ body { background: #fff6ed; font-family: 'Quicksand', sans-serif; min-width: 144
 .profile-cta { display: block; width: 100%; background: #adce9f; color: #212121; font-family: 'Quicksand', sans-serif; font-size: 15px; font-weight: 700; border: none; border-radius: 2px; padding: 10px; cursor: pointer; text-align: center; }
 .profile-cta:hover { background: #8fba81; }
 
-/* CONTACT CTA */
+/* ── CONTACT CTA ── */
 .contact-cta { position: relative; height: 300px; display: flex; align-items: center; justify-content: center; gap: 16px; overflow: hidden; }
 .contact-cta-bg { position: absolute; inset: 0; }
 .contact-cta-bg img { width: 100%; height: 100%; object-fit: cover; }
@@ -87,13 +89,13 @@ body { background: #fff6ed; font-family: 'Quicksand', sans-serif; min-width: 144
 .cta-btn { position: relative; z-index: 1; background: #fff6ed; color: #212121; font-family: 'Quicksand', sans-serif; font-size: 18px; font-weight: 700; letter-spacing: 1px; padding: 14px 40px; border-radius: 2px; border: none; cursor: pointer; text-transform: uppercase; transition: all 0.2s; }
 .cta-btn:hover { background: #212121; color: #fff6ed; }
 
-/* ALSO OF INTEREST */
+/* ── ALSO OF INTEREST ── */
 .also { background: #fff; padding: 18px 0; display: flex; align-items: center; justify-content: center; gap: 36px; border-top: 1px solid #e4d2c1; border-bottom: 1px solid #e4d2c1; }
 .also-label { font-family: 'Staatliches', sans-serif; font-size: 20px; color: #212121; text-transform: uppercase; }
 .also a { font-size: 16px; font-weight: 500; color: #62810e; text-decoration: none; }
 .also a:hover { text-decoration: underline; }
 
-/* FOOTER */
+/* ── FOOTER ── */
 .footer { background: #fff6ed; padding: 50px 5%; border-top: 1px solid #e4d2c1; }
 .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1400px; }
 .footer-podcasts { display: flex; gap: 30px; }
@@ -119,7 +121,7 @@ body { background: #fff6ed; font-family: 'Quicksand', sans-serif; min-width: 144
 .footer-divider { color: #ccc; padding: 0 4px; }
 .footer-copy { font-size: 13px; color: #212121; margin-top: 16px; }
 
-/* TOAST */
+/* ── TOAST ── */
 .toast { position: fixed; bottom: 32px; right: 32px; background: #212121; color: #fff6ed; font-family: 'Quicksand', sans-serif; font-size: 15px; padding: 14px 24px; border-radius: 4px; opacity: 0; transition: opacity 0.3s; z-index: 999; pointer-events: none; }
 .toast.show { opacity: 1; }
 </style>
@@ -275,30 +277,30 @@ body { background: #fff6ed; font-family: 'Quicksand', sans-serif; min-width: 144
 
 <script>
 var members = [
-  { name: 'BRITTANY AMELL',      role: 'TRADER',                             quote: '"Ten years ago I decided I didn\'t want a career I couldn\'t be passionate about and that\'s how I came to coffee. I came for the coffee but stayed for the people."',                                    stats: [['FAVORITE HOLIDAY','Halloween'],          ['FIRST ORIGIN TRIP','Colombia 2016'],  ['FIRST ALBUM OWNED','Britney Spears, Baby One More Time']] },
-  { name: 'MICHELLE ANARIBA',    role: 'QUALITY CONTROL MANAGER',            quote: '"Quality is not just a checklist — it\'s a conversation between the farmer, the land, and the cup."',                                                                                                   stats: [['FAVORITE ORIGIN','Guatemala'],           ['YEARS AT COVOYA','7'],               ['COFFEE ORDER','Washed Ethiopian, no milk']] },
-  { name: 'ERICK ARMBRUST',      role: 'TRADE COORDINATOR',                  quote: '"Coffee trading is part logistics puzzle, part relationship building. Every shipment represents months of trust."',                                                                                       stats: [['FAVORITE ORIGIN','Colombia'],            ['FIRST ORIGIN TRIP','Honduras 2018'], ['HIDDEN TALENT','Semi-pro chess player']] },
-  { name: 'MARINA BORISOV',      role: 'LOGISTICS COORDINATOR',              quote: '"Getting coffee from a farm in Ethiopia to a roaster in Portland on time is genuinely thrilling."',                                                                                                       stats: [['FAVORITE HOLIDAY','New Years Eve'],      ['LANGUAGES SPOKEN','English, Russian, Spanish'], ['COFFEE ORDER','Double espresso']] },
-  { name: 'LIESA COLLINS',       role: 'SENIOR TRADE ANALYST',               quote: '"Data is the language of trust in green coffee. When I can show a roaster exactly where their lot came from, that\'s when the relationship deepens."',                                                    stats: [['FAVORITE ORIGIN','Kenya'],               ['FIRST ORIGIN TRIP','Rwanda 2015'],   ['FIRST ALBUM OWNED','No Doubt, Tragic Kingdom']] },
-  { name: 'ERIK DELLA POSTA',    role: 'SENIOR OPERATIONS PROCESS MANAGER',  quote: '"Operations is the invisible backbone of everything we do. When it\'s working well no one notices — and that\'s exactly how I like it."',                                                                stats: [['FAVORITE HOLIDAY','Thanksgiving'],       ['YEARS AT COVOYA','9'],               ['COFFEE ORDER','Batch brew, black']] },
-  { name: 'MIKE FERGUSON',       role: 'CHIEF STORYTELLER',                  quote: '"Every coffee has a story worth telling — from the hands that picked it to the cup it ends up in."',                                                                                                     stats: [['FAVORITE ORIGIN','Ethiopia'],            ['COFFEE ORDER','Pour over, light roast'], ['HIDDEN TALENT','Amateur filmmaker']] },
-  { name: 'MELISSA GOMES',       role: 'LOGISTICS SUPERVISOR',               quote: '"Logistics is where the magic either happens or falls apart. I make sure it always happens."',                                                                                                           stats: [['FAVORITE HOLIDAY','Christmas'],          ['YEARS AT COVOYA','5'],               ['COFFEE ORDER','Cappuccino']] },
-  { name: 'ANGELA GREENHAGEN',   role: 'JUNIOR TRADER',                      quote: '"I came to coffee through a love of travel and ended up staying for the complexity of the trade."',                                                                                                      stats: [['FAVORITE ORIGIN','Peru'],                ['FIRST ORIGIN TRIP','Guatemala 2022'],['COFFEE ORDER','Flat white']] },
-  { name: 'ANGELA HERNANDEZ',    role: 'QUALITY CONTROL ASSISTANT',          quote: '"Every cup is a chance to catch something beautiful — or to catch a problem before it reaches the roaster."',                                                                                            stats: [['FAVORITE ORIGIN','Honduras'],            ['COFFEE ORDER','Cold brew'],          ['HIDDEN TALENT','Competitive cupper']] },
-  { name: 'MARK INMAN',          role: 'DIRECTOR & SENIOR TRADER',           quote: '"Building long-term relationships with producers is the foundation of everything we do."',                                                                                                                stats: [['FAVORITE ORIGIN','Burundi'],             ['YEARS AT COVOYA','12'],              ['COFFEE ORDER','Black drip']] },
-  { name: 'IAN KLUSE',           role: 'SENIOR TRADER & SOURCING DIRECTOR',  quote: '"Sourcing is part detective work, part diplomacy. You\'re always looking for the next great lot."',                                                                                                      stats: [['FAVORITE ORIGIN','Yemen'],               ['FIRST ORIGIN TRIP','Colombia 2013'], ['COFFEE ORDER','Espresso, straight']] },
-  { name: 'TODD MACKEY',         role: 'SENIOR TRADER',                      quote: '"Green coffee trading rewards patience. The best lots come to those who invest in the relationships behind them."',                                                                                       stats: [['FAVORITE ORIGIN','Kenya'],               ['YEARS AT COVOYA','8'],               ['COFFEE ORDER','Chemex']] },
-  { name: 'JOSHUA MARSCEAU',     role: 'TRADER',                             quote: '"Every trade is a puzzle — price, quality, timing, relationships. Getting all four right is what gets me out of bed."',                                                                                  stats: [['FAVORITE ORIGIN','Colombia'],            ['FIRST ORIGIN TRIP','Ethiopia 2019'], ['COFFEE ORDER','AeroPress']] },
-  { name: 'ANNA MALLOZZI',       role: 'JUNIOR TRADER',                      quote: '"I love that green coffee trading sits at the intersection of agriculture, finance, and human connection."',                                                                                              stats: [['FAVORITE ORIGIN','Costa Rica'],          ['COFFEE ORDER','Oat milk latte'],    ['HIDDEN TALENT','Competitive cyclist']] },
-  { name: 'CHARLEY REQUADT',     role: 'DIRECTOR OF OPERATIONS',             quote: '"The best processes are built around the people running them."',                                                                                                                                          stats: [['FAVORITE HOLIDAY','Fourth of July'],     ['YEARS AT COVOYA','10'],              ['COFFEE ORDER','Drip, always drip']] },
-  { name: 'RACHEL STANICH',      role: 'JUNIOR TRADER',                      quote: '"There\'s something meaningful about connecting farmers with roasters who will honor that work."',                                                                                                        stats: [['FAVORITE ORIGIN','Rwanda'],              ['FIRST ORIGIN TRIP','Peru 2023'],     ['COFFEE ORDER','V60']] },
-  { name: 'ROB STEPHEN',         role: 'MANAGING DIRECTOR',                  quote: '"Covoya exists because we believe trade should be a force for good — for producers, for roasters, and for every person in between."',                                                                    stats: [['FAVORITE ORIGIN','Ethiopia'],            ['YEARS AT COVOYA','15'],              ['COFFEE ORDER','Single origin espresso']] },
-  { name: 'SAM SUPSKY',          role: 'MARKETING MANAGER',                  quote: '"Green coffee is one of the most fascinating industries in the world and most people have no idea it exists."',                                                                                          stats: [['FAVORITE ORIGIN','Panama'],              ['HIDDEN TALENT','Latte art champion'],['COFFEE ORDER','Cortado']] },
-  { name: 'HANNAH VAN AKKEREN',  role: 'CUSTOMER SERVICE COORDINATOR',       quote: '"Our customers trust us to get things right every single time. I take that seriously."',                                                                                                                 stats: [['FAVORITE HOLIDAY','Thanksgiving'],       ['YEARS AT COVOYA','3'],               ['COFFEE ORDER','Cold brew, oat milk']] },
-  { name: 'COLLEEN WALSH',       role: 'LOGISTICS MANAGER',                  quote: '"Moving green coffee around the world is endlessly complex. That complexity is exactly what I love."',                                                                                                   stats: [['FAVORITE ORIGIN','Brazil'],              ['YEARS AT COVOYA','6'],               ['COFFEE ORDER','Double espresso']] },
-  { name: 'JESSY WEBSTER',       role: 'TRADE COORDINATOR',                  quote: '"Coordination is about anticipating problems before they happen and building systems that prevent them."',                                                                                                stats: [['FAVORITE ORIGIN','Colombia'],            ['COFFEE ORDER','Pour over'],          ['HIDDEN TALENT','Amateur botanist']] },
-  { name: 'ETHAN WHITE',         role: 'DIGITAL PRODUCT MANAGER',            quote: '"Technology should make the work of trading easier and more transparent."',                                                                                                                              stats: [['FAVORITE ORIGIN','Ethiopia'],            ['YEARS AT COVOYA','4'],               ['COFFEE ORDER','Batch brew']] },
-  { name: 'DAVID ZACHARY',       role: 'FINANCE DIRECTOR',                   quote: '"Finance in green coffee is fascinating — you\'re managing risk at every level, from currency to climate."',                                                                                             stats: [['FAVORITE HOLIDAY','New Years Eve'],      ['YEARS AT COVOYA','7'],               ['COFFEE ORDER','Black, no exceptions']] }
+  { name: 'BRITTANY AMELL',     role: 'TRADER',                            quote: '"Ten years ago I decided I didn\'t want a career I couldn\'t be passionate about and that\'s how I came to coffee. I came for the coffee but stayed for the people."',                                 stats: [['FAVORITE HOLIDAY', 'Halloween'],         ['FIRST ORIGIN TRIP', 'Colombia 2016'],  ['FIRST ALBUM OWNED', 'Britney Spears, Baby One More Time']] },
+  { name: 'MICHELLE ANARIBA',   role: 'QUALITY CONTROL MANAGER',           quote: '"Quality is not just a checklist — it\'s a conversation between the farmer, the land, and the cup."',                                                                                                stats: [['FAVORITE ORIGIN', 'Guatemala'],          ['YEARS AT COVOYA', '7'],               ['COFFEE ORDER', 'Washed Ethiopian, no milk']] },
+  { name: 'ERICK ARMBRUST',     role: 'TRADE COORDINATOR',                 quote: '"Coffee trading is part logistics puzzle, part relationship building. Every shipment represents months of trust."',                                                                                    stats: [['FAVORITE ORIGIN', 'Colombia'],           ['FIRST ORIGIN TRIP', 'Honduras 2018'], ['HIDDEN TALENT', 'Semi-pro chess player']] },
+  { name: 'MARINA BORISOV',     role: 'LOGISTICS COORDINATOR',             quote: '"Getting coffee from a farm in Ethiopia to a roaster in Portland on time is genuinely thrilling."',                                                                                                    stats: [['FAVORITE HOLIDAY', 'New Years Eve'],     ['LANGUAGES SPOKEN', 'English, Russian, Spanish'], ['COFFEE ORDER', 'Double espresso']] },
+  { name: 'LIESA COLLINS',      role: 'SENIOR TRADE ANALYST',              quote: '"Data is the language of trust in green coffee. When I can show a roaster exactly where their lot came from, that\'s when the relationship deepens."',                                                 stats: [['FAVORITE ORIGIN', 'Kenya'],              ['FIRST ORIGIN TRIP', 'Rwanda 2015'],   ['FIRST ALBUM OWNED', 'No Doubt, Tragic Kingdom']] },
+  { name: 'ERIK DELLA POSTA',   role: 'SENIOR OPERATIONS PROCESS MANAGER', quote: '"Operations is the invisible backbone of everything we do. When it\'s working well no one notices — and that\'s exactly how I like it."',                                                             stats: [['FAVORITE HOLIDAY', 'Thanksgiving'],      ['YEARS AT COVOYA', '9'],               ['COFFEE ORDER', 'Batch brew, black']] },
+  { name: 'MIKE FERGUSON',      role: 'CHIEF STORYTELLER',                 quote: '"Every coffee has a story worth telling — from the hands that picked it to the cup it ends up in."',                                                                                                  stats: [['FAVORITE ORIGIN', 'Ethiopia'],           ['COFFEE ORDER', 'Pour over, light roast'], ['HIDDEN TALENT', 'Amateur filmmaker']] },
+  { name: 'MELISSA GOMES',      role: 'LOGISTICS SUPERVISOR',              quote: '"Logistics is where the magic either happens or falls apart. I make sure it always happens."',                                                                                                         stats: [['FAVORITE HOLIDAY', 'Christmas'],         ['YEARS AT COVOYA', '5'],               ['COFFEE ORDER', 'Cappuccino']] },
+  { name: 'ANGELA GREENHAGEN',  role: 'JUNIOR TRADER',                     quote: '"I came to coffee through a love of travel and ended up staying for the complexity of the trade."',                                                                                                   stats: [['FAVORITE ORIGIN', 'Peru'],               ['FIRST ORIGIN TRIP', 'Guatemala 2022'], ['COFFEE ORDER', 'Flat white']] },
+  { name: 'ANGELA HERNANDEZ',   role: 'QUALITY CONTROL ASSISTANT',         quote: '"Every cup is a chance to catch something beautiful — or to catch a problem before it reaches the roaster."',                                                                                         stats: [['FAVORITE ORIGIN', 'Honduras'],           ['COFFEE ORDER', 'Cold brew'],          ['HIDDEN TALENT', 'Competitive cupper']] },
+  { name: 'MARK INMAN',         role: 'DIRECTOR & SENIOR TRADER',          quote: '"Building long-term relationships with producers is the foundation of everything we do."',                                                                                                             stats: [['FAVORITE ORIGIN', 'Burundi'],            ['YEARS AT COVOYA', '12'],              ['COFFEE ORDER', 'Black drip']] },
+  { name: 'IAN KLUSE',          role: 'SENIOR TRADER & SOURCING DIRECTOR', quote: '"Sourcing is part detective work, part diplomacy. You\'re always looking for the next great lot."',                                                                                                   stats: [['FAVORITE ORIGIN', 'Yemen'],              ['FIRST ORIGIN TRIP', 'Colombia 2013'], ['COFFEE ORDER', 'Espresso, straight']] },
+  { name: 'TODD MACKEY',        role: 'SENIOR TRADER',                     quote: '"Green coffee trading rewards patience. The best lots come to those who invest in the relationships behind them."',                                                                                    stats: [['FAVORITE ORIGIN', 'Kenya'],              ['YEARS AT COVOYA', '8'],               ['COFFEE ORDER', 'Chemex']] },
+  { name: 'JOSHUA MARSCEAU',    role: 'TRADER',                            quote: '"Every trade is a puzzle — price, quality, timing, relationships. Getting all four right is what gets me out of bed."',                                                                               stats: [['FAVORITE ORIGIN', 'Colombia'],           ['FIRST ORIGIN TRIP', 'Ethiopia 2019'], ['COFFEE ORDER', 'AeroPress']] },
+  { name: 'ANNA MALLOZZI',      role: 'JUNIOR TRADER',                     quote: '"I love that green coffee trading sits at the intersection of agriculture, finance, and human connection."',                                                                                          stats: [['FAVORITE ORIGIN', 'Costa Rica'],         ['COFFEE ORDER', 'Oat milk latte'],    ['HIDDEN TALENT', 'Competitive cyclist']] },
+  { name: 'CHARLEY REQUADT',    role: 'DIRECTOR OF OPERATIONS',            quote: '"The best processes are built around the people running them."',                                                                                                                                       stats: [['FAVORITE HOLIDAY', 'Fourth of July'],    ['YEARS AT COVOYA', '10'],              ['COFFEE ORDER', 'Drip, always drip']] },
+  { name: 'RACHEL STANICH',     role: 'JUNIOR TRADER',                     quote: '"There\'s something meaningful about connecting farmers with roasters who will honor that work."',                                                                                                     stats: [['FAVORITE ORIGIN', 'Rwanda'],             ['FIRST ORIGIN TRIP', 'Peru 2023'],     ['COFFEE ORDER', 'V60']] },
+  { name: 'ROB STEPHEN',        role: 'MANAGING DIRECTOR',                 quote: '"Covoya exists because we believe trade should be a force for good — for producers, for roasters, and for every person in between."',                                                                 stats: [['FAVORITE ORIGIN', 'Ethiopia'],           ['YEARS AT COVOYA', '15'],              ['COFFEE ORDER', 'Single origin espresso']] },
+  { name: 'SAM SUPSKY',         role: 'MARKETING MANAGER',                 quote: '"Green coffee is one of the most fascinating industries in the world and most people have no idea it exists."',                                                                                       stats: [['FAVORITE ORIGIN', 'Panama'],             ['HIDDEN TALENT', 'Latte art champion'], ['COFFEE ORDER', 'Cortado']] },
+  { name: 'HANNAH VAN AKKEREN', role: 'CUSTOMER SERVICE COORDINATOR',      quote: '"Our customers trust us to get things right every single time. I take that seriously."',                                                                                                              stats: [['FAVORITE HOLIDAY', 'Thanksgiving'],      ['YEARS AT COVOYA', '3'],               ['COFFEE ORDER', 'Cold brew, oat milk']] },
+  { name: 'COLLEEN WALSH',      role: 'LOGISTICS MANAGER',                 quote: '"Moving green coffee around the world is endlessly complex. That complexity is exactly what I love."',                                                                                                stats: [['FAVORITE ORIGIN', 'Brazil'],             ['YEARS AT COVOYA', '6'],               ['COFFEE ORDER', 'Double espresso']] },
+  { name: 'JESSY WEBSTER',      role: 'TRADE COORDINATOR',                 quote: '"Coordination is about anticipating problems before they happen and building systems that prevent them."',                                                                                             stats: [['FAVORITE ORIGIN', 'Colombia'],           ['COFFEE ORDER', 'Pour over'],          ['HIDDEN TALENT', 'Amateur botanist']] },
+  { name: 'ETHAN WHITE',        role: 'DIGITAL PRODUCT MANAGER',           quote: '"Technology should make the work of trading easier and more transparent."',                                                                                                                           stats: [['FAVORITE ORIGIN', 'Ethiopia'],           ['YEARS AT COVOYA', '4'],               ['COFFEE ORDER', 'Batch brew']] },
+  { name: 'DAVID ZACHARY',      role: 'FINANCE DIRECTOR',                  quote: '"Finance in green coffee is fascinating — you\'re managing risk at every level, from currency to climate."',                                                                                          stats: [['FAVORITE HOLIDAY', 'New Years Eve'],     ['YEARS AT COVOYA', '7'],               ['COFFEE ORDER', 'Black, no exceptions']] }
 ];
 
 function toTitleCase(str) {
@@ -314,10 +316,9 @@ function buildList() {
           + '</div>';
   }
   document.getElementById('teamInner').innerHTML = html;
-
   var rows = document.getElementById('teamInner').querySelectorAll('.team-member');
-  for (var j = 0; j < rows.length; j++) {
-    rows[j].addEventListener('click', function() {
+  for (var i = 0; i < rows.length; i++) {
+    rows[i].addEventListener('click', function() {
       selectMember(this, parseInt(this.getAttribute('data-idx')));
     });
   }
@@ -325,7 +326,9 @@ function buildList() {
 
 function selectMember(el, idx) {
   var rows = document.querySelectorAll('.team-member');
-  for (var i = 0; i < rows.length; i++) { rows[i].classList.remove('active'); }
+  for (var i = 0; i < rows.length; i++) {
+    rows[i].classList.remove('active');
+  }
   el.classList.add('active');
 
   var m = members[idx];
@@ -348,10 +351,9 @@ function selectMember(el, idx) {
   cta.textContent = 'Learn more about ' + firstName;
   cta.onclick = function() { showToast('Opening ' + firstName + '\'s full profile...'); };
 
-  var card = document.getElementById('profileCard');
   var tilts = [-3, -1, 2, 4];
-  var tilt = tilts[Math.floor(Math.random() * tilts.length)];
-  card.style.transform = 'rotate(' + tilt + 'deg)';
+  var card = document.getElementById('profileCard');
+  card.style.transform = 'rotate(' + tilts[Math.floor(Math.random() * tilts.length)] + 'deg)';
   card.classList.add('visible');
 }
 
