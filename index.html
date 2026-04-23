@@ -382,6 +382,11 @@ function selectMember(el, idx) {
   cta.textContent = 'Learn more about ' + firstName;
   cta.onclick = function() { showToast('Opening ' + firstName + '\'s full profile...'); };
 
+  var nameTilts = [-1, 2];
+  var roleTilts = [-2, 1];
+  document.getElementById('cardName').parentElement.style.transform = 'rotate(' + nameTilts[Math.floor(Math.random() * 2)] + 'deg)';
+  document.getElementById('cardRole').parentElement.style.transform = 'rotate(' + roleTilts[Math.floor(Math.random() * 2)] + 'deg)';
+
   var tilts = [-3, -1, 2, 4];
   var card = document.getElementById('profileCard');
   card.style.transform = 'rotate(' + tilts[Math.floor(Math.random() * tilts.length)] + 'deg)';
