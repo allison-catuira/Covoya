@@ -37,7 +37,10 @@ body { background: #fff6ed; font-family: 'Quicksand', sans-serif; min-width: 144
 .intro { background: #fff; padding: 80px 5%; text-align: center; }
 .intro p { font-size: 16px; font-weight: 500; line-height: 1.7; color: #212121; max-width: 1116px; margin: 0 auto; }
 
-/* ── TEAM SECTION ── */
+/* ── TEAM FILTER ── */
+.team-header-row { position: absolute; left: 7%; top: 81px; right: 7%; display: flex; align-items: center; gap: 32px; z-index: 3; pointer-events: all; }
+.team-title { font-family: 'Staatliches', sans-serif; font-size: 64px; color: #fff6ed; white-space: nowrap; pointer-events: none; }
+.team-filter select { font-family: 'Quicksand', sans-serif; font-size: 14px; font-weight: 600; color: #212121; background: #fff6ed; border: none; border-radius: 2px; padding: 8px 32px 8px 14px; cursor: pointer; outline: none; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23212121' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
 .team-section { position: relative; width: 100%; height: 1255px; overflow: hidden; }
 .team-layer-bg { position: absolute; inset: 0; background: #343e30; z-index: 0; }
 .team-layer-texture { position: absolute; inset: 0; z-index: 1; mix-blend-mode: multiply; opacity: 0.3; overflow: hidden; pointer-events: none; }
@@ -183,7 +186,14 @@ body { background: #fff6ed; font-family: 'Quicksand', sans-serif; min-width: 144
   <div class="team-cups">
     <img src="https://www.figma.com/api/mcp/asset/38582652-953c-47c0-9fc8-202eaf10baaf" alt=""/>
   </div>
-  <div class="team-title">Our team</div>
+  <div class="team-header-row">
+    <div class="team-title">Our team</div>
+    <div class="team-filter">
+      <select id="roleFilter" onchange="filterTeam()">
+        <option value="">All Roles</option>
+      </select>
+    </div>
+  </div>
   <div class="team-divider-top">
     <img src="https://www.figma.com/api/mcp/asset/ddfba69f-1851-4340-9d0d-c2dd9fe59e4b" alt=""/>
   </div>
@@ -308,17 +318,41 @@ function toTitleCase(str) {
 }
 
 function buildList() {
-  var html = '';
+  var roles = [];
   for (var i = 0; i < members.length; i++) {
-    html += '<div class="team-member" data-idx="' + i + '">'
-          + '<div class="name">' + toTitleCase(members[i].name) + '</div>'
-          + '<div class="role">' + members[i].role + '</div>'
+    if (roles.indexOf(members[i].role) === -1) roles.push(members[i].role);
+  }
+  roles.sort();
+  var select = document.getElementById('roleFilter');
+  for (var r = 0; r < roles.length; r++) {
+    var opt = document.createElement('option');
+    opt.value = roles[r];
+    opt.textContent = roles[r];
+    select.appendChild(opt);
+  }
+  renderList(members);
+}
+
+function filterTeam() {
+  var val = document.getElementById('roleFilter').value;
+  var filtered = val ? members.filter(function(m) { return m.role === val; }) : members;
+  document.getElementById('profileCard').classList.remove('visible');
+  renderList(filtered);
+}
+
+function renderList(list) {
+  var html = '';
+  for (var i = 0; i < list.length; i++) {
+    var origIdx = members.indexOf(list[i]);
+    html += '<div class="team-member" data-idx="' + origIdx + '">'
+          + '<div class="name">' + toTitleCase(list[i].name) + '</div>'
+          + '<div class="role">' + list[i].role + '</div>'
           + '</div>';
   }
   document.getElementById('teamInner').innerHTML = html;
   var rows = document.getElementById('teamInner').querySelectorAll('.team-member');
-  for (var i = 0; i < rows.length; i++) {
-    rows[i].addEventListener('click', function() {
+  for (var j = 0; j < rows.length; j++) {
+    rows[j].addEventListener('click', function() {
       selectMember(this, parseInt(this.getAttribute('data-idx')));
     });
   }
