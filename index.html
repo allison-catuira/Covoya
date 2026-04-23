@@ -335,7 +335,7 @@ function renderList(list) {
 }
 
 function buildList() {
-  var categories = ['trading', 'office', 'leadership', 'operations', 'logistics', 'quality control', 'marketing'];
+  var categories = ['Trading', 'Office', 'Leadership', 'Operations', 'Logistics', 'Quality Control', 'Marketing'];
   var select = document.getElementById('roleFilter');
   for (var i = 0; i < categories.length; i++) {
     var opt = document.createElement('option');
@@ -348,7 +348,7 @@ function buildList() {
 
 function filterTeam() {
   var val = document.getElementById('roleFilter').value;
-  var filtered = val ? members.filter(function(m) { return m.categories.indexOf(val) !== -1; }) : members;
+  var filtered = val ? members.filter(function(m) { return m.categories.indexOf(val.toLowerCase()) !== -1; }) : members;
   document.getElementById('profileCard').classList.remove('visible');
   renderList(filtered);
 }
